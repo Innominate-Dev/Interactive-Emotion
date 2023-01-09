@@ -18,8 +18,6 @@ public class PlayerController : MonoBehaviour
     public float airMultiplier;
     bool readyToJump = true;
 
-    public float wallRunSpeed;
-
     ///////// KEYBINDS /////////
 
     [Header("Keybinds")]
@@ -44,7 +42,6 @@ public class PlayerController : MonoBehaviour
     Vector3 moveDirection; ///////// DIRECTION THE PLAYER MOVES IN
 
     Rigidbody rb; /// PLAYER RIGID BODY
-    Animator myAnim;
 
     /////////////////// MOVEMENT STATE ///////////////////
 
@@ -55,18 +52,15 @@ public class PlayerController : MonoBehaviour
     {
         walking,
         sprinting,
-        air,
-        WallRunning
+        air
     }
 
-    public bool WallRunning;
 
 
 
     // Start is called before the first frame update
     void Start()
     {
-        myAnim = GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
     }
@@ -80,18 +74,11 @@ public class PlayerController : MonoBehaviour
         PlayerInput(); /////////// THIS IS TO CONSTANTLY CHECK ON THE PLAYER IF THEY PRESS DOWN A MOVEMENT KEY AND It is called every frame
         SpeedControl();
         StateHandler();
-        //TiltWallRun();
 
         ////// Tilting the player if they wall run /////////////
 
         playerrot = Player.rotation.z;
         playerrot = 45f;
-
-
-        ///// Getting the magnitude of the player for the animation /////////
-
-        myAnim.SetFloat("speed", moveDirection.magnitude);
-        Debug.Log(moveDirection.magnitude);
 
         // handle drag
         if(isGrounded)
@@ -101,11 +88,6 @@ public class PlayerController : MonoBehaviour
         else
         {
             rb.drag = 0f;
-        }
-
-        if( WallRunning == false)
-        {
-            rb.useGravity = true;
         }
     }
 
@@ -142,24 +124,18 @@ public class PlayerController : MonoBehaviour
         {
             state = MovementState.sprinting;
             moveSpeed = sprintSpeed;
-            myAnim.SetBool("Running", true);
+
         }
         else if (isGrounded)
         {
             state = MovementState.walking;
             moveSpeed = walkSpeed;
-            myAnim.SetBool("Running", false);
+
         }
-        // Mode - Wallrunning
-        else if(WallRunning == true)
-        {
-            state = MovementState.WallRunning;
-            moveSpeed = wallRunSpeed;
-        }
-        else if (!WallRunning)
+        else if (!isGrounded)
         {
             state = MovementState.air;
-            myAnim.SetBool("Running", false);
+
         }
 
     }
@@ -204,12 +180,4 @@ public class PlayerController : MonoBehaviour
         readyToJump = true;
     }
 
-    private void TiltWallRun()
-    {
-        if (WallRunning == true)
-        {
-            Player.transform.rotation = Quaternion.Euler(new Vector3(playerrot, Player.transform.rotation.eulerAngles.y, Player.transform.rotation.eulerAngles.y));
-        }
-        
-    }
 }

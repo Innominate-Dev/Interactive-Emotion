@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    public float MouseSensetivity = 100f;
+    public float MouseSensitivity = 10f;
 
     public Transform playerObj;
 
@@ -20,11 +20,14 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //float mouseX = Input.GetAxis(mouseX) * MouseSensetivity * Time.deltaTime;
-        //float mouseY = Input.GetAxis(mouseY) * MouseSensetivity * Time.deltaTime;
+        float mouseX = Input.GetAxis("Mouse X") * MouseSensitivity * Time.deltaTime;
+        float mouseY = Input.GetAxis("Mouse Y") * MouseSensitivity * Time.deltaTime;
 
-        //xRotation -= mouseY;
-        //xRotation = Mathf.Clamp(xRotation, 90f, 90f);
+        xRotation -= mouseY;
+        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+
+        transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+        playerObj.Rotate(Vector3.up * mouseX);
 
     }
 }

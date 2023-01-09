@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     public float jumpCoolDown;
     public float airMultiplier;
     bool readyToJump = true;
+    public float gravity = -9.81f;
 
     ///////// KEYBINDS /////////
 
@@ -74,6 +75,8 @@ public class PlayerController : MonoBehaviour
         PlayerInput(); /////////// THIS IS TO CONSTANTLY CHECK ON THE PLAYER IF THEY PRESS DOWN A MOVEMENT KEY AND It is called every frame
         SpeedControl();
         StateHandler();
+
+        moveDirection.y = gravity * Time.deltaTime;
 
         ////// Tilting the player if they wall run /////////////
 

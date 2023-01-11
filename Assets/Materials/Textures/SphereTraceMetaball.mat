@@ -123,7 +123,7 @@ Material:
     m_Colors:
     - Vector3_ff841d114cec48548b0a41259e363307: {r: 0, g: 0, b: 0, a: 0}
     - _Albedo: {r: 0, g: 1, b: 0.6701975, a: 1}
-    - _BaseColor: {r: 0.34433958, g: 1, b: 0.73684895, a: 0.8}
+    - _BaseColor: {r: 0.34433958, g: 1, b: 0.73684895, a: 0.8509804}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Emission: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}

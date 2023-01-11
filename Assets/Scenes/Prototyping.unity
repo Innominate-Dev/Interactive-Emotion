@@ -140,11 +140,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13a6d66e4084de640b8556d8d80b8a42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintColor: {r: 0, g: 1, b: 0.52860975, a: 0}
-  minRadius: 0.05
-  maxRadius: 0.2
+  paintColor: {r: 0, g: 1, b: 0.52860975, a: 1}
+  minRadius: 0.2
+  maxRadius: 1.5
   strength: 1
-  hardness: 1
+  hardness: 0.01
 --- !u!1 &386181005
 GameObject:
   m_ObjectHideFlags: 0
@@ -475,6 +475,10 @@ PrefabInstance:
     - target: {fileID: 4897688663030317946, guid: b2bb67f3e0e3f544cb281e0901b1c601, type: 3}
       propertyPath: CollisionModule.collidesWith.m_Bits
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 4897688663030317946, guid: b2bb67f3e0e3f544cb281e0901b1c601, type: 3}
+      propertyPath: CollisionModule.collidesWithDynamic
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4897688663030317947, guid: b2bb67f3e0e3f544cb281e0901b1c601, type: 3}
       propertyPath: m_Materials.Array.data[0]

@@ -29,6 +29,7 @@ public class PaintManager : Singleton<PaintManager>{
         extendMaterial = new Material(extendIslands);
         command = new CommandBuffer();
         command.name = "CommmandBuffer - " + gameObject.name;
+        Debug.Log("Awake has ran");
     }
 
     public void initTextures(Paintable paintable){
@@ -48,6 +49,7 @@ public class PaintManager : Singleton<PaintManager>{
 
         Graphics.ExecuteCommandBuffer(command);
         command.Clear();
+        Debug.Log("Ran InitTextures");
     }
 
 
@@ -79,6 +81,8 @@ public class PaintManager : Singleton<PaintManager>{
 
         Graphics.ExecuteCommandBuffer(command);
         command.Clear();
+
+        Debug.Log("Ran Paintable");
     }
 
 }

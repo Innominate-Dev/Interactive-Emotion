@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: PaintableWall
-  m_Shader: {fileID: -6465566751694194690, guid: d720082e5b71004498653db605c207b2, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: b3833010479ee6a4ba9b711b35b526cd, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -41,6 +41,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _MaskTexture:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_09b0bcd3e0ac461896e712789996eae9_Texture_1:
+        m_Texture: {fileID: 10300, guid: 0000000000000000f000000000000000, type: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:

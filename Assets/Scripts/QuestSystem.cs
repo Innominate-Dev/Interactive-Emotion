@@ -15,6 +15,10 @@ public class QuestSystem : MonoBehaviour
 
     public RawImage UICrosshair;
     public TextMeshProUGUI Interaction;
+    public GameObject Dialogue1;
+
+    [SerializeField] private TextWriter textWriter;
+    public TextMeshProUGUI DialogueText1;
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +36,13 @@ public class QuestSystem : MonoBehaviour
             if(hit.collider.CompareTag("NPC"))
             {
                 InteractionActive();
+                if(Input.GetKeyDown(KeyCode.E))
+                {
+                    Cursor.visible = true;
+                    Cursor.lockState = CursorLockMode.None;
+                    Dialogue1.SetActive(true);
+                    textWriter.AddWriter(DialogueText1, "Ash Hi I am Ash! I've heard a lot about you. Can you do me a favour? Find this memory for me I'll pay you! It is very dear to me.", .1f, true);
+                }
             }
             else
             {

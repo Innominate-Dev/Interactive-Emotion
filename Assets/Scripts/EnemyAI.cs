@@ -57,7 +57,7 @@ public class EnemyAI : MonoBehaviour
 
         // Walkpoint reached
         if (distanceToWalkPoint.magnitude < 1f)
-            walkPointSet = false;
+            walkPointSet = true;
     }
 
     private void SearchWalkPoint()
@@ -92,9 +92,9 @@ public class EnemyAI : MonoBehaviour
 
         if(!alreadyAttacked)
         {
-            Rigidbody rb = Instantiate(Bullets, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
-            rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
-            rb.AddForce(transform.up * 32f, ForceMode.Impulse);
+           // Rigidbody rb = Instantiate(Bullets, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
+            //rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
+            //rb.AddForce(transform.up * 32f, ForceMode.Impulse);
 
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);

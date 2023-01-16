@@ -15,10 +15,21 @@ public class QuestSystem : MonoBehaviour
 
     public RawImage UICrosshair;
     public TextMeshProUGUI Interaction;
+
+    [Header("Dialogue Object")]
     public GameObject Dialogue1;
+    public GameObject Dialogue2;
+
+    [Header("Text Writer")]
 
     [SerializeField] private TextWriter textWriter;
+    [SerializeField] private TextWriter textWriter2;
+
+
+    [Header("Text References")]
+
     public TextMeshProUGUI DialogueText1;
+    public TextMeshProUGUI DialogueText2;
 
     // Start is called before the first frame update
     void Start()
@@ -40,8 +51,16 @@ public class QuestSystem : MonoBehaviour
                 {
                     Cursor.visible = true;
                     Cursor.lockState = CursorLockMode.None;
-                    Dialogue1.SetActive(true);
-                    textWriter.AddWriter(DialogueText1, "Ash Hi I am Ash! I've heard a lot about you. Can you do me a favour? Find this memory for me I'll pay you! It is very dear to me.", .1f, true);
+                    if (hit.transform.name == "Ash")
+                    {
+                        Dialogue1.SetActive(true);
+                        textWriter.AddWriter(DialogueText1, "Ash Hi I am Ash! I've heard a lot about you. Can you do me a favour? Find this memory for me I'll pay you! It is very dear to me.", .1f, true);
+                    }
+                    if(hit.transform.name == "Sam")
+                    {
+                        Dialogue2.SetActive(true);
+                        textWriter2.AddWriter(DialogueText2, "Hi I am Sam! I've heard a lot about you. Can you do me a favour? Find this memory for me I'll pay you! It is very dear to me.", .1f, true);
+                    }
                 }
             }
             else

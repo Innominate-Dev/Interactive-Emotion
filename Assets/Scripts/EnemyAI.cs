@@ -1,13 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
+    [Header("References")]
     public NavMeshAgent agent;
 
     public Transform player;
+
+    public GameObject Bullets;
+    public GameObject Barrel;
 
     public LayerMask whatIsGround, whatIsPlayer;
 
@@ -19,7 +24,6 @@ public class EnemyAI : MonoBehaviour
     //Attacking
     public float timeBetweenAttacks;
     bool alreadyAttacked;
-    public GameObject Bullets;
 
     public float health;
 
@@ -57,7 +61,7 @@ public class EnemyAI : MonoBehaviour
 
         // Walkpoint reached
         if (distanceToWalkPoint.magnitude < 1f)
-            walkPointSet = true;
+            walkPointSet = false;
     }
 
     private void SearchWalkPoint()
@@ -92,9 +96,13 @@ public class EnemyAI : MonoBehaviour
 
         if(!alreadyAttacked)
         {
-           // Rigidbody rb = Instantiate(Bullets, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
+            // Rigidbody rb = Instantiate(Bullets, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
             //rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
             //rb.AddForce(transform.up * 32f, ForceMode.Impulse);
+
+            GameObject bulletObject = Instantiate(Bullets);
+            bulletObject.transform.position = Barrel.transform.position + transform.forward;
+            bulletObject.transform.forward = Barrel.transform.forward;
 
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
@@ -115,5 +123,10 @@ public class EnemyAI : MonoBehaviour
     private void DestroyEnemy()
     {
         Destroy(gameObject);
+    }
+
+    private void OnParticleCollision(GameObject other)
+    {
+        TakeDamage(1);
     }
 }

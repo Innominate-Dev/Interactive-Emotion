@@ -154,7 +154,8 @@ public class EnemyAI : MonoBehaviour
         {
             Debug.Log("Run");
             Debug.Log(health);
-            TakeDamage(1);
+            
+            //TakeDamage(1);
         }
         
     }

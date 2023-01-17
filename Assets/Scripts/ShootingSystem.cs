@@ -7,7 +7,7 @@ public class ShootingSystem : MonoBehaviour
     public GameObject Bullets;
     public GameObject Barrel;
 
-    bool Shooting;
+    public bool Shooting;
 
     [SerializeField] ParticleSystem inkParticle;
 
@@ -21,11 +21,11 @@ public class ShootingSystem : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             inkParticle.Play();
-            Shooting = false;
-            if (Shooting == true)
-            {
-                Invoke(nameof(Shootings), .2f);
-            }
+            Shooting = true;
+            //if (Shooting == true)
+            //{
+            //    Invoke(nameof(Shootings), .2f);
+            //}
         }
         else if (Input.GetMouseButtonUp(0))
         {

@@ -308,7 +308,7 @@ GameObject:
   - component: {fileID: 137575152}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -374,7 +374,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 137575144}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2
   m_Direction: 1
@@ -469,7 +469,7 @@ MeshCollider:
   m_GameObject: {fileID: 137575144}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
@@ -1733,6 +1733,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Bullets: {fileID: 0}
   Barrel: {fileID: 0}
+  Shooting: 0
   inkParticle: {fileID: 4897688663661914326}
 --- !u!1 &869710186
 GameObject:

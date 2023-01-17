@@ -305,6 +305,7 @@ GameObject:
   - component: {fileID: 137575146}
   - component: {fileID: 137575145}
   - component: {fileID: 137575151}
+  - component: {fileID: 137575152}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -373,7 +374,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 137575144}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5
   m_Height: 2
   m_Direction: 1
@@ -459,6 +460,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!64 &137575152
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 137575144}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &189442175
 GameObject:
   m_ObjectHideFlags: 0
@@ -1716,6 +1731,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29ce4f2ccda68ea48878b9467393e211, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Bullets: {fileID: 0}
+  Barrel: {fileID: 0}
   inkParticle: {fileID: 4897688663661914326}
 --- !u!1 &869710186
 GameObject:
@@ -42726,7 +42743,7 @@ GameObject:
   - component: {fileID: 259870933}
   m_Layer: 3
   m_Name: Collision Particle
-  m_TagString: Untagged
+  m_TagString: PaintCollision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

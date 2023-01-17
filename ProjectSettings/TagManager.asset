@@ -8,6 +8,7 @@ TagManager:
   - NPC
   - Enemy
   - EnemyBullets
+  - PaintCollision
   layers:
   - Default
   - TransparentFX

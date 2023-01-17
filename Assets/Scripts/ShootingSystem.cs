@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class ShootingSystem : MonoBehaviour
 {
-    
+    public GameObject Bullets;
+    public GameObject Barrel;
+
+    bool Shooting;
 
     [SerializeField] ParticleSystem inkParticle;
 
@@ -16,10 +19,25 @@ public class ShootingSystem : MonoBehaviour
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
+        {
             inkParticle.Play();
+            Shooting = false;
+            if (Shooting == true)
+            {
+                Invoke(nameof(Shootings), .2f);
+            }
+        }
         else if (Input.GetMouseButtonUp(0))
+        {
             inkParticle.Stop();
+            Shooting = false;
+        }
     }
-
+    private void Shootings()
+    {
+        GameObject bulletObject = Instantiate(Bullets);
+        bulletObject.transform.position = Barrel.transform.position + transform.forward;
+        bulletObject.transform.forward = Barrel.transform.forward;
+    }
    
 }

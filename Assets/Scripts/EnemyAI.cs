@@ -24,6 +24,7 @@ public class EnemyAI : MonoBehaviour
     //Attacking
     public float timeBetweenAttacks;
     bool alreadyAttacked;
+    bool beingAttacked;
 
     public float health;
 
@@ -43,14 +44,26 @@ public class EnemyAI : MonoBehaviour
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
 
-        if (!playerInSightRange && !playerInAttackRange) Patrolling();
-        if (playerInSightRange && !playerInAttackRange) ChasePlayer();
-        if (playerInSightRange && playerInAttackRange) AttackPlayer();
+        if (!playerInSightRange && !playerInAttackRange)
+        {
+            Patrolling();
+        }
+        if (playerInSightRange && !playerInAttackRange)
+        {
+            ChasePlayer();
+        }
+        if (playerInSightRange && playerInAttackRange)
+        {
+            AttackPlayer();
+        }
     }
 
     private void Patrolling()
     {
-        if (!walkPointSet) SearchWalkPoint();
+        if (!walkPointSet)
+        {
+            SearchWalkPoint();
+        }
 
         if (walkPointSet)
         {
@@ -100,9 +113,9 @@ public class EnemyAI : MonoBehaviour
             //rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
             //rb.AddForce(transform.up * 32f, ForceMode.Impulse);
 
-            GameObject bulletObject = Instantiate(Bullets);
-            bulletObject.transform.position = Barrel.transform.position + transform.forward;
-            bulletObject.transform.forward = Barrel.transform.forward;
+            //GameObject bulletObject = Instantiate(Bullets);
+            //bulletObject.transform.position = Barrel.transform.position + transform.forward;
+            //bulletObject.transform.forward = Barrel.transform.forward;
 
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
@@ -117,7 +130,17 @@ public class EnemyAI : MonoBehaviour
     {
         health -= damage;
 
-        if (health <= 0) Invoke(nameof(DestroyEnemy), .5f);
+        if (health <= 0)
+        { 
+            Invoke(nameof(DestroyEnemy), .1f); 
+        }
+        beingAttacked = true;
+        Invoke(nameof(BeingAttacked), .1f);
+    }
+
+    private void BeingAttacked()
+    {
+        beingAttacked = false;
     }
 
     private void DestroyEnemy()
@@ -127,6 +150,12 @@ public class EnemyAI : MonoBehaviour
 
     private void OnParticleCollision(GameObject other)
     {
-        TakeDamage(1);
+        if(other.tag == "PaintCollision")
+        {
+            Debug.Log("Run");
+            Debug.Log(health);
+            TakeDamage(1);
+        }
+        
     }
 }

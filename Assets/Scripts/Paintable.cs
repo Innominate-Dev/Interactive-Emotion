@@ -47,6 +47,5 @@ public class Paintable : MonoBehaviour
         uvIslandsRenderTexture.Release();
         extendIslandsRenderTexture.Release();
         supportTexture.Release();
-        Debug.Log("OnDisabled running");
     }
 }

@@ -207,9 +207,9 @@ GameObject:
   - component: {fileID: 113279988}
   - component: {fileID: 113279987}
   - component: {fileID: 113279986}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Barrel
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -306,7 +306,7 @@ GameObject:
   - component: {fileID: 137575145}
   - component: {fileID: 137575151}
   - component: {fileID: 137575152}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -460,20 +460,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!64 &137575152
-MeshCollider:
+--- !u!65 &137575152
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 137575144}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2, z: 1.2604623}
+  m_Center: {x: 0, y: 0, z: 0.13023138}
 --- !u!1 &189442175
 GameObject:
   m_ObjectHideFlags: 0
@@ -569,9 +568,9 @@ GameObject:
   - component: {fileID: 307269206}
   - component: {fileID: 307269205}
   - component: {fileID: 307269204}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Eyes
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1152,6 +1151,7 @@ GameObject:
   - component: {fileID: 759088240}
   - component: {fileID: 759088241}
   - component: {fileID: 759088242}
+  - component: {fileID: 759088243}
   m_Layer: 3
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1294,36 +1294,18 @@ MonoBehaviour:
   textWriter2: {fileID: 2082845188}
   DialogueText1: {fileID: 812036933}
   DialogueText2: {fileID: 856255108}
---- !u!1 &800754585
-GameObject:
+--- !u!114 &759088243
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 800754586}
-  m_Layer: 0
-  m_Name: NavMesh
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &800754586
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 800754585}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.689407, y: 6.330694, z: 0.3064747}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 759088236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c8e10c93fa0617498e38c60a0e0aa5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &812036930
 GameObject:
   m_ObjectHideFlags: 0
@@ -1726,14 +1708,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 859414964}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 29ce4f2ccda68ea48878b9467393e211, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Bullets: {fileID: 0}
   Barrel: {fileID: 0}
-  Shooting: 0
   inkParticle: {fileID: 4897688663661914326}
 --- !u!1 &869710186
 GameObject:
@@ -6962,9 +6943,9 @@ GameObject:
   - component: {fileID: 1070757808}
   - component: {fileID: 1070757807}
   - component: {fileID: 1070757806}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Gun
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22655,6 +22636,7 @@ GameObject:
   - component: {fileID: 1796361139}
   - component: {fileID: 1796361138}
   - component: {fileID: 1796361137}
+  - component: {fileID: 1796361140}
   m_Layer: 3
   m_Name: Gun
   m_TagString: Untagged
@@ -22739,6 +22721,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1796361135}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1796361140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1796361135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29ce4f2ccda68ea48878b9467393e211, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bullets: {fileID: 6907912669697442138, guid: c4121ee5832252244b024184f0343d9d, type: 3}
+  Barrel: {fileID: 386181005}
+  inkParticle: {fileID: 4897688663661914326}
 --- !u!1 &1807648870
 GameObject:
   m_ObjectHideFlags: 0

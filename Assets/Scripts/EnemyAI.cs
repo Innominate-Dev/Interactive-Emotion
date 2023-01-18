@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
+using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -31,6 +32,7 @@ public class EnemyAI : MonoBehaviour
     //States
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
+
 
     private void Awake()
     {
@@ -126,7 +128,7 @@ public class EnemyAI : MonoBehaviour
         alreadyAttacked = false;
     }
 
-    public void TakeDamage(int damage)
+    void TakeDamage(int damage)
     {
         health -= damage;
 
@@ -134,8 +136,6 @@ public class EnemyAI : MonoBehaviour
         { 
             Invoke(nameof(DestroyEnemy), .1f); 
         }
-        beingAttacked = true;
-        Invoke(nameof(BeingAttacked), .1f);
     }
 
     private void BeingAttacked()
@@ -148,15 +148,24 @@ public class EnemyAI : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void OnParticleCollision(GameObject other)
-    {
-        if(other.tag == "PaintCollision")
-        {
-            Debug.Log("Run");
-            Debug.Log(health);
+    //private void OnParticleCollision(GameObject other)
+    //{
+    //    if(other.tag == "PaintCollision")
+    //    {
+    //        Debug.Log("Run");
+    //        Debug.Log(health);
             
-            //TakeDamage(1);
-        }
+    //        TakeDamage(1);
+    //    }
         
+    //}
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "EnemyBullets")
+        {
+            TakeDamage(5);
+            Destroy(other);
+        }
     }
 }

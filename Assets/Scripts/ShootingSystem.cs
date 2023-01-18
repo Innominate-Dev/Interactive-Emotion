@@ -8,12 +8,14 @@ public class ShootingSystem : MonoBehaviour
     public GameObject Barrel;
 
     public static bool PlayerShooting;
+    public float limit;
 
     [SerializeField] ParticleSystem inkParticle;
 
     void Start()
     {
         PlayerShooting = false;
+        limit = 1;
     }
 
     void Update()
@@ -22,15 +24,13 @@ public class ShootingSystem : MonoBehaviour
         {
             inkParticle.Play();
             PlayerShooting = true;
-            if (PlayerShooting == true)
-            {
-                StartCoroutine(BulletShooting());
-            }
+            StartCoroutine(BulletShooting());
         }
         else if (Input.GetMouseButtonUp(0))
         {
             inkParticle.Stop();
             PlayerShooting = false;
+            limit = 1;
         }
     }
     private void Shootings()
@@ -41,13 +41,21 @@ public class ShootingSystem : MonoBehaviour
     }
     IEnumerator BulletShooting()
     {
-        for (var i = 0; i < 10; i++)
+        for (var i = 0; i < limit; i++)
         {
-            //StartCoroutine(BulletShooting());
-            GameObject bulletObject = Instantiate(Bullets);
-            bulletObject.transform.position = Barrel.transform.position + transform.forward;
-            bulletObject.transform.forward = Barrel.transform.forward;
-            yield return new WaitForSeconds(1f);
+            if (PlayerShooting == true)
+            {
+                //StartCoroutine(BulletShooting());
+                GameObject bulletObject = Instantiate(Bullets);
+                bulletObject.transform.position = Barrel.transform.position + transform.forward;
+                bulletObject.transform.forward = Barrel.transform.forward;
+                yield return new WaitForSeconds(1f);
+                limit++;
+            }
+            else
+            {
+                limit = 1;
+            }
         }
     }
 }

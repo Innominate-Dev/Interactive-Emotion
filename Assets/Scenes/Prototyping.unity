@@ -571,7 +571,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ea6f09149b6ceb4d853303301941d10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NewTexture: {fileID: 2800000, guid: 280ac6c9be670774e99b22dd09fe101f, type: 3}
+  NewTexture:
+  - {fileID: 2800000, guid: 084424e25b82ba04faf24d25f2f22265, type: 3}
+  - {fileID: 2800000, guid: db7d3a735d87dcd4d8f288b5d98029a1, type: 3}
+  CurrentTexture: 0
+  ChangedTexture: 0
+  m_renderer: {fileID: 0}
 --- !u!64 &232059267
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6944,8 +6949,8 @@ GameObject:
   - component: {fileID: 923166449}
   - component: {fileID: 923166448}
   - component: {fileID: 923166447}
-  - component: {fileID: 923166451}
   - component: {fileID: 923166446}
+  - component: {fileID: 923166451}
   m_Layer: 8
   m_Name: Cube (3)
   m_TagString: Untagged
@@ -7043,19 +7048,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
---- !u!114 &923166451
-MonoBehaviour:
+--- !u!208 &923166451
+NavMeshObstacle:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 923166445}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ea6f09149b6ceb4d853303301941d10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NewTexture: {fileID: 2800000, guid: 9834a9afec3e16c4bbebdfa0f0cc67d1, type: 3}
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &1070757804
 GameObject:
   m_ObjectHideFlags: 0

@@ -115,9 +115,9 @@ public class EnemyAI : MonoBehaviour
             //rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
             //rb.AddForce(transform.up * 32f, ForceMode.Impulse);
 
-            //GameObject bulletObject = Instantiate(Bullets);
-            //bulletObject.transform.position = Barrel.transform.position + transform.forward;
-            //bulletObject.transform.forward = Barrel.transform.forward;
+            GameObject bulletObject = Instantiate(Bullets);
+            bulletObject.transform.position = Barrel.transform.position + transform.forward;
+            bulletObject.transform.forward = Barrel.transform.forward;
 
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);

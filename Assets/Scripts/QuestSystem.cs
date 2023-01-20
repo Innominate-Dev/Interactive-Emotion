@@ -31,6 +31,10 @@ public class QuestSystem : MonoBehaviour
     public TextMeshProUGUI DialogueText1;
     public TextMeshProUGUI DialogueText2;
 
+    [Header("Interactables")]
+
+    public GameObject Poem;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -61,6 +65,14 @@ public class QuestSystem : MonoBehaviour
                         Dialogue2.SetActive(true);
                         textWriter2.AddWriter(DialogueText2, "Hi I am Sam! I've heard a lot about you. Can you do me a favour? Find this memory for me I'll pay you! It is very dear to me.", .1f, true);
                     }
+                }
+            }
+            else if(hit.collider.name == "Poem")
+            {
+                InteractionActive();
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    Poem.SetActive(true);
                 }
             }
             else

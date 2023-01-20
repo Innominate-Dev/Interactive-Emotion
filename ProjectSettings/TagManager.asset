@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - EnemyBullets
   - PaintCollision
+  - Interactable
   layers:
   - Default
   - TransparentFX

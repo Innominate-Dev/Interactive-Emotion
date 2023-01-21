@@ -16,6 +16,9 @@ public class QuestSystem : MonoBehaviour
     public RawImage UICrosshair;
     public TextMeshProUGUI Interaction;
 
+    public GameObject Objective;
+    public GameObject OfferButtons;
+
     [Header("Dialogue Object")]
     public GameObject Dialogue1;
     public GameObject Dialogue2;
@@ -99,5 +102,26 @@ public class QuestSystem : MonoBehaviour
     {
         UICrosshair.gameObject.SetActive(true);
         Interaction.gameObject.SetActive(false);
+    }
+
+    public void AcceptOffer()
+    {
+        Objective.SetActive(true);
+        Dialogue1.SetActive(false); 
+        Dialogue2.SetActive(false);
+        OfferButtons.SetActive(false);
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+
+    }
+
+    public void DeclineOffer()
+    {
+        Objective.SetActive(false);
+        Dialogue1.SetActive(false);
+        Dialogue2.SetActive(false);
+        OfferButtons.SetActive(false);
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 }

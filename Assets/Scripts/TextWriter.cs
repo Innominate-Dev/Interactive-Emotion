@@ -11,6 +11,8 @@ public class TextWriter : MonoBehaviour
     private float timePerCharacter;
     private float timer;
     private bool invisibleCharacters;
+
+    public GameObject OffersButton;
     public void AddWriter(TextMeshProUGUI uiText, string textToWrite, float timePerCharacter,bool invisibleCharacters)
     {
         this.uiText = uiText;
@@ -37,6 +39,7 @@ public class TextWriter : MonoBehaviour
 
                 if(characterIndex >= textToWrite.Length)
                 {
+                    OffersButton.gameObject.SetActive(true);
                     uiText = null;
                     return;
                 }

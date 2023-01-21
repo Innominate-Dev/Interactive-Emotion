@@ -16,5 +16,7 @@ public class LoadScene : MonoBehaviour
     public void ClosePoem()
     {
         PoemUI.SetActive(false);
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 }

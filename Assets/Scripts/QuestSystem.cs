@@ -72,6 +72,8 @@ public class QuestSystem : MonoBehaviour
                 InteractionActive();
                 if (Input.GetKeyDown(KeyCode.E))
                 {
+                    Cursor.visible = true;
+                    Cursor.lockState = CursorLockMode.None;
                     Poem.SetActive(true);
                 }
             }

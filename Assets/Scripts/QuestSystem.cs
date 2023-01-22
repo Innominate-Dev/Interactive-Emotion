@@ -34,9 +34,24 @@ public class QuestSystem : MonoBehaviour
     public TextMeshProUGUI DialogueText1;
     public TextMeshProUGUI DialogueText2;
 
+    public TextMeshProUGUI FindMemory;
+    public TextMeshProUGUI PaintTheWall;
+
     [Header("Interactables")]
 
     public GameObject Poem;
+
+    public GameObject AshQuest;
+    public GameObject SamQuest;
+
+    public bool AshMemoryCollected = false;
+    public bool SamMemoryCollected = false;
+
+    public bool AshQuestStarted = false;
+    public bool SamQuestStarted = false;
+
+    public bool AshTalking = false;
+    public bool SamTalking = false;
 
     // Start is called before the first frame update
     void Start()
@@ -58,15 +73,29 @@ public class QuestSystem : MonoBehaviour
                 {
                     Cursor.visible = true;
                     Cursor.lockState = CursorLockMode.None;
-                    if (hit.transform.name == "Ash")
+
+                    ////////////////// NPC INTERACTION ///////////////
+                    
+                    if (hit.transform.name == "Ash" && AshMemoryCollected == false)
                     {
                         Dialogue1.SetActive(true);
                         textWriter.AddWriter(DialogueText1, "Ash Hi I am Ash! I've heard a lot about you. Can you do me a favour? Find this memory for me I'll pay you! It is very dear to me.", .1f, true);
+                        AshTalking = true;
+                        FindMemory.gameObject.SetActive(true);
+                    }
+                    else if(AshMemoryCollected == true)
+                    {
+                        Dialogue1.SetActive(true);
+                        textWriter.AddWriter(DialogueText1,"WOW You found it thanks! Could you just paint it on the wall for me.",.1f,true);
+                        FindMemory.text = "- <s>Find the memory</s>";
+                        PaintTheWall.gameObject.SetActive(true);
+
                     }
                     if(hit.transform.name == "Sam")
                     {
                         Dialogue2.SetActive(true);
                         textWriter2.AddWriter(DialogueText2, "Hi I am Sam! I've heard a lot about you. Can you do me a favour? Find this memory for me I'll pay you! It is very dear to me.", .1f, true);
+                        SamTalking = true;
                     }
                 }
             }
@@ -75,9 +104,28 @@ public class QuestSystem : MonoBehaviour
                 InteractionActive();
                 if (Input.GetKeyDown(KeyCode.E))
                 {
+                    //// Poem Letter ///
+                    
                     Cursor.visible = true;
                     Cursor.lockState = CursorLockMode.None;
-                    Poem.SetActive(true);
+                    Poem.SetActive(true); 
+                }
+            }
+            ////////////// INTERACTABLE //////////////
+            else if (hit.transform.tag == "Interactable")
+            {
+                ///////////////// MEMORY QUEST /////////////////
+                if (hit.transform.name == "Ash Memory")
+                {
+                    if(AshQuestStarted == true)
+                    {
+                        InteractionActive();
+                        if(Input.GetKeyDown(KeyCode.E))
+                        {
+                            AshMemoryCollected = true;
+                            Destroy(hit.collider.gameObject);
+                        }
+                    }
                 }
             }
             else
@@ -86,11 +134,13 @@ public class QuestSystem : MonoBehaviour
             }
         else
         {
-            InteractionDeactive();
+            InteractionDeactive(); /// In case the player isn't looking at anything the interaction text disables
         }
 
         Debug.DrawLine(transform.position, hit.point, Color.blue);
     }
+
+    /////////////////////////////// ENABLES/DISABLES Crosshair and Interactions Text////////////////////////////
 
     public void InteractionActive()
     {
@@ -104,6 +154,8 @@ public class QuestSystem : MonoBehaviour
         Interaction.gameObject.SetActive(false);
     }
 
+    //////////////////////////////// ACCEPT OR DECLINE BUTTONS FUNCTION ///////////////////////////////
+
     public void AcceptOffer()
     {
         Objective.SetActive(true);
@@ -112,6 +164,21 @@ public class QuestSystem : MonoBehaviour
         OfferButtons.SetActive(false);
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+        if(AshTalking == true)
+        {
+            AshQuest.SetActive(true);
+            AshQuestStarted = true;
+}
+        else if(SamTalking == true)
+        {
+            SamQuest.SetActive(true);
+            SamQuestStarted = true;
+        }
+
+        //if(AshMemoryCollected == true)
+        //{
+        //    PaintTheWall.gameObject.SetActive(true);
+        //}
 
     }
 
@@ -124,4 +191,6 @@ public class QuestSystem : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
+
+
 }

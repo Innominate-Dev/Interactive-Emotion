@@ -8,6 +8,10 @@ public class showFPS : MonoBehaviour
     public TextMeshProUGUI fpsText;
     public float deltaTime;
 
+    void Start()
+    {
+        //Application.targetFrameRate = 300;
+    }
     void Update()
     {
         deltaTime += (Time.deltaTime - deltaTime) * 0.1f;

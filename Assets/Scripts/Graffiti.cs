@@ -20,9 +20,15 @@ public class Graffiti : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            Color color = PaintingWall.color;
-            color.a += 1f * Time.deltaTime;
-            PaintingWall.color = color;
+            if(Input.GetKey(KeyCode.E))
+            {
+                Color color = PaintingWall.color;
+                if (color.a <= 1f)
+                {
+                    color.a += 1f * Time.deltaTime;
+                    PaintingWall.color = color;
+                }
+            }
             Debug.Log("Test");
         }
         Debug.Log("Tester");

@@ -6,9 +6,16 @@ public class Graffiti : MonoBehaviour
 {
     public Material PaintingWall;
     // Start is called before the first frame update
+
+    private void Awake()
+    {
+
+    }
     void Start()
     {
-        
+        Color color = PaintingWall.color;
+        color.a = 0;
+        PaintingWall.color = color;
     }
 
     // Update is called once per frame

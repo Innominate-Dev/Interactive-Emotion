@@ -42,16 +42,16 @@ public class QuestSystem : MonoBehaviour
     public GameObject Poem;
 
     public GameObject AshQuest;
-    public GameObject SamQuest;
+    public GameObject QuynhQuest;
 
     public bool AshMemoryCollected = false;
-    public bool SamMemoryCollected = false;
+    public bool QuynhMemoryCollected = false;
 
     public bool AshQuestStarted = false;
-    public bool SamQuestStarted = false;
+    public bool QuynhQuestStarted = false;
 
     public bool AshTalking = false;
-    public bool SamTalking = false;
+    public bool QuynhTalking = false;
 
     // Start is called before the first frame update
     void Start()
@@ -91,11 +91,11 @@ public class QuestSystem : MonoBehaviour
                         PaintTheWall.gameObject.SetActive(true);
 
                     }
-                    if(hit.transform.name == "Sam")
+                    if(hit.transform.name == "Quynh")
                     {
                         Dialogue2.SetActive(true);
-                        textWriter2.AddWriter(DialogueText2, "Hi I am Sam! I've heard a lot about you. Can you do me a favour? Find this memory for me I'll pay you! It is very dear to me.", .1f, true);
-                        SamTalking = true;
+                        textWriter2.AddWriter(DialogueText2, "Hi I am Quynh! I've heard a lot about you. Can you do me a favour? Find this memory for me I'll pay you! It is very dear to me.", .1f, true);
+                        QuynhTalking = true;
                     }
                 }
             }
@@ -169,10 +169,10 @@ public class QuestSystem : MonoBehaviour
             AshQuest.SetActive(true);
             AshQuestStarted = true;
 }
-        else if(SamTalking == true)
+        else if(QuynhTalking == true)
         {
-            SamQuest.SetActive(true);
-            SamQuestStarted = true;
+            QuynhQuest.SetActive(true);
+            QuynhQuestStarted = true;
         }
 
         //if(AshMemoryCollected == true)
@@ -190,6 +190,23 @@ public class QuestSystem : MonoBehaviour
         OfferButtons.SetActive(false);
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    public void AshSkip()
+    {
+        if(AshMemoryCollected == true)
+        {
+            textWriter.AddWriter(DialogueText1, "WOW You found it thanks! Could you just paint it on the wall for me.", .1f, true);
+        }
+        else if(AshMemoryCollected == false)
+        {
+            textWriter.AddWriter(DialogueText1, "Ash Hi I am Ash! I've heard a lot about you. Can you do me a favour? Find this memory for me I'll pay you! It is very dear to me.", .0f, true);
+        }
+    }
+
+    public void QuynhSkip()
+    {
+
     }
 
 

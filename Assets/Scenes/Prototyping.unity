@@ -686,7 +686,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!65 &137575152
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -695,11 +695,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 137575144}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
+  m_IsTrigger: 0
+  m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 2, z: 1.2604623}
-  m_Center: {x: 0, y: 0, z: 0.13023138}
+  m_Size: {x: 2.2982178, y: 2, z: 2.3521738}
+  m_Center: {x: -0.067700624, y: 0, z: -0.10064697}
 --- !u!1 &166769188
 GameObject:
   m_ObjectHideFlags: 0
@@ -1045,7 +1045,7 @@ GameObject:
   - component: {fileID: 304534134}
   - component: {fileID: 304534133}
   m_Layer: 0
-  m_Name: Sam Memory
+  m_Name: Quynh Memory
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1465,7 +1465,7 @@ GameObject:
   - component: {fileID: 444416140}
   - component: {fileID: 444416139}
   m_Layer: 0
-  m_Name: Sam
+  m_Name: Quynh
   m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2003,13 +2003,13 @@ MonoBehaviour:
   PaintTheWall: {fileID: 850767931}
   Poem: {fileID: 83088262}
   AshQuest: {fileID: 803043998}
-  SamQuest: {fileID: 304534131}
+  QuynhQuest: {fileID: 304534131}
   AshMemoryCollected: 0
-  SamMemoryCollected: 0
+  QuynhMemoryCollected: 0
   AshQuestStarted: 0
-  SamQuestStarted: 0
+  QuynhQuestStarted: 0
   AshTalking: 0
-  SamTalking: 0
+  QuynhTalking: 0
 --- !u!1 &761683706
 GameObject:
   m_ObjectHideFlags: 0
@@ -2866,7 +2866,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &859414968
 MonoBehaviour:
@@ -8064,9 +8064,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1665321862}
-        m_TargetAssemblyTypeName: LoadScene, Assembly-CSharp
-        m_MethodName: SkipDialogue
+      - m_Target: {fileID: 759088242}
+        m_TargetAssemblyTypeName: QuestSystem, Assembly-CSharp
+        m_MethodName: AshSkip
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -41720,7 +41720,7 @@ GameObject:
   - component: {fileID: 4897688661867838742}
   - component: {fileID: 4897688661867838740}
   - component: {fileID: 4897688661867838741}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: SubEmitter0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46637,7 +46637,7 @@ GameObject:
   - component: {fileID: 4897688663005852142}
   - component: {fileID: 4897688663005852140}
   - component: {fileID: 4897688663005852141}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Shoot Effect Particle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51537,9 +51537,9 @@ GameObject:
   - component: {fileID: 4897688663553897775}
   - component: {fileID: 4897688663553897773}
   - component: {fileID: 4897688663553897774}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Splash Particle
-  m_TagString: Untagged
+  m_TagString: PaintCollision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -56396,7 +56396,7 @@ GameObject:
   - component: {fileID: 4897688663646210999}
   - component: {fileID: 4897688663646211000}
   - component: {fileID: 259870933}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Collision Particle
   m_TagString: PaintCollision
   m_Icon: {fileID: 0}
@@ -61316,9 +61316,9 @@ GameObject:
   - component: {fileID: 4897688663661914328}
   - component: {fileID: 4897688663661914326}
   - component: {fileID: 4897688663661914327}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Main Visual Particle
-  m_TagString: Untagged
+  m_TagString: PaintCollision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

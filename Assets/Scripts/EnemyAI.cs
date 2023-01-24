@@ -32,11 +32,20 @@ public class EnemyAI : MonoBehaviour
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
 
+    //References
 
+    //public ParticleSystem part;
+    //public List<ParticleCollisionEvent> collisionEvents;
     private void Awake()
     {
         player = GameObject.Find("PlayerObj").transform;
         agent = GetComponent<NavMeshAgent>();
+    }
+
+    private void Start()
+    {
+        //part = GetComponent<ParticleSystem>();
+        //collision = new List<ParticleCollisionEvent>();
     }
 
     private void Update()
@@ -147,17 +156,19 @@ public class EnemyAI : MonoBehaviour
         Destroy(gameObject);
     }
 
-    //private void OnParticleCollision(GameObject other)
-    //{
-    //    if(other.tag == "PaintCollision")
-    //    {
-    //        Debug.Log("Run");
-    //        Debug.Log(health);
-            
-    //        TakeDamage(1);
-    //    }
-        
-    //}
+    private void OnParticleCollision(GameObject other)
+    {
+        //int numCollisionEvents = ParticleCollisionEvent.GetCollisionEvents(other, collisionEvents);
+
+        if (other.tag == "PaintCollision")
+        {
+            Debug.Log("Run");
+            Debug.Log(health);
+
+            TakeDamage(1);
+        }
+
+    }
 
     private void OnTriggerEnter(Collider other)
     {

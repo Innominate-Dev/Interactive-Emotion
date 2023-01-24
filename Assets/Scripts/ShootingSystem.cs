@@ -24,7 +24,7 @@ public class ShootingSystem : MonoBehaviour
         {
             inkParticle.Play();
             PlayerShooting = true;
-            StartCoroutine(BulletShooting());
+            //StartCoroutine(BulletShooting());
         }
         else if (Input.GetMouseButtonUp(0))
         {

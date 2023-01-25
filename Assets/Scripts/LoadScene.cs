@@ -19,4 +19,8 @@ public class LoadScene : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
+    public void PlayGame()
+    {
+        SceneManager.LoadScene("Prototyping");
+    }
 }

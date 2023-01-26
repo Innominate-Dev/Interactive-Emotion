@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -12,12 +13,13 @@ public class PlayerController : MonoBehaviour
     public float sprintSpeed;
 
     public float groundDrag;
+    public float playerHealth;
 
     public float jumpForce;
     public float jumpCoolDown;
     public float airMultiplier;
-    bool readyToJump = true;
     public float gravity = -9.81f;
+    bool readyToJump = true;
 
     ///////// KEYBINDS /////////
 
@@ -78,12 +80,7 @@ public class PlayerController : MonoBehaviour
 
         moveDirection.y = gravity * Time.deltaTime;
 
-        ////// Tilting the player if they wall run /////////////
-
-        playerrot = Player.rotation.z;
-        playerrot = 45f;
-
-        // handle drag
+        ////// Handles Drag on the player /////
         if(isGrounded)
         {
             rb.drag = groundDrag;
@@ -181,6 +178,23 @@ public class PlayerController : MonoBehaviour
     private void ResetJump()
     {
         readyToJump = true;
+    }
+
+    private void Health(int damage)
+    {
+        playerHealth -= damage;
+        if(playerHealth <= 0)
+        {
+            SceneManager.LoadScene("DeathScreen");
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "EnemyBullets")
+        {
+            Health(15);
+        }
     }
 
 }

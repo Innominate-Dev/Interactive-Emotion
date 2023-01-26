@@ -44,6 +44,8 @@ public class QuestSystem : MonoBehaviour
     public GameObject AshQuest;
     public GameObject QuynhQuest;
 
+    [Header("States")]
+
     public bool AshMemoryCollected = false;
     public bool QuynhMemoryCollected = false;
 
@@ -65,6 +67,8 @@ public class QuestSystem : MonoBehaviour
         Ray ray = cam.ViewportPointToRay(new Vector3(DistanceX, DistanceY, 0));
         RaycastHit hit;
 
+        ///Checking what the Raycast is hitting 
+        
         if (Physics.Raycast(ray, out hit))
             if(hit.collider.CompareTag("NPC"))
             {
@@ -74,7 +78,7 @@ public class QuestSystem : MonoBehaviour
                     Cursor.visible = true;
                     Cursor.lockState = CursorLockMode.None;
 
-                    ////////////////// NPC INTERACTION ///////////////
+                    ////////////////// Ash Interaction ///////////////
                     
                     if (hit.transform.name == "Ash" && AshMemoryCollected == false)
                     {
@@ -83,6 +87,7 @@ public class QuestSystem : MonoBehaviour
                         AshTalking = true;
                         FindMemory.gameObject.SetActive(true);
                     }
+
                     else if(AshMemoryCollected == true)
                     {
                         Dialogue1.SetActive(true);
@@ -91,14 +96,27 @@ public class QuestSystem : MonoBehaviour
                         PaintTheWall.gameObject.SetActive(true);
 
                     }
-                    if(hit.transform.name == "Quynh")
+
+                    ////////////////////// Quynh Interaction //////////////////////
+                    if(hit.transform.name == "Quynh" && QuynhMemoryCollected == false)
                     {
                         Dialogue2.SetActive(true);
                         textWriter2.AddWriter(DialogueText2, "Hi I am Quynh! I've heard a lot about you. Can you do me a favour? Find this memory for me I'll pay you! It is very dear to me.", .1f, true);
                         QuynhTalking = true;
+                        FindMemory.gameObject.SetActive(true);
+                    }
+
+                    else if (QuynhMemoryCollected == true)
+                    {
+                        Dialogue2.SetActive(true);
+                        textWriter2.AddWriter(DialogueText2, "WOW You found it thanks! Could you just paint it on the wall for me.", .1f, true);
+                        FindMemory.text = "- <s>Find the memory</s>";
+                        PaintTheWall.gameObject.SetActive(true);
+
                     }
                 }
             }
+
             else if(hit.collider.name == "Poem")
             {
                 InteractionActive();
@@ -111,7 +129,9 @@ public class QuestSystem : MonoBehaviour
                     Poem.SetActive(true); 
                 }
             }
-            ////////////// INTERACTABLE //////////////
+
+            ////////////// INTERACTABLES //////////////
+            
             else if (hit.transform.tag == "Interactable")
             {
                 ///////////////// MEMORY QUEST /////////////////
@@ -123,6 +143,18 @@ public class QuestSystem : MonoBehaviour
                         if(Input.GetKeyDown(KeyCode.E))
                         {
                             AshMemoryCollected = true;
+                            Destroy(hit.collider.gameObject);
+                        }
+                    }
+                }
+                else if(hit.transform.name == "Quynh Memory")
+                {
+                    if (QuynhQuestStarted == true)
+                    {
+                        InteractionActive();
+                        if (Input.GetKeyDown(KeyCode.E))
+                        {
+                            QuynhMemoryCollected = true;
                             Destroy(hit.collider.gameObject);
                         }
                     }
@@ -196,18 +228,26 @@ public class QuestSystem : MonoBehaviour
     {
         if(AshMemoryCollected == true)
         {
-            textWriter.AddWriter(DialogueText1, "WOW You found it thanks! Could you just paint it on the wall for me.", .1f, true);
+            textWriter.AddWriter(DialogueText1, "WOW You found it thanks! Could you just paint it on the wall for me.", 0f, true);
         }
         else if(AshMemoryCollected == false)
         {
-            textWriter.AddWriter(DialogueText1, "Ash Hi I am Ash! I've heard a lot about you. Can you do me a favour? Find this memory for me I'll pay you! It is very dear to me.", .0f, true);
+            textWriter.AddWriter(DialogueText1, "Ash Hi I am Ash! I've heard a lot about you. Can you do me a favour? Find this memory for me I'll pay you! It is very dear to me.", 0f, true);
         }
     }
 
     public void QuynhSkip()
     {
-
+        if (QuynhMemoryCollected == true)
+        {
+            textWriter2.AddWriter(DialogueText2, "WOW You found it thanks! Could you just paint it on the wall for me.", 0f, true);
+            Debug.Log("Running Skip");
+        }
+        else if (QuynhMemoryCollected == false)
+        {
+            textWriter2.AddWriter(DialogueText2, "Hi I am Quynh! I've heard a lot about you. Can you do me a favour? Find this memory for me I'll pay you! It is very dear to me.", 0f, true);
+            Debug.Log("Skipped");
+        }
     }
-
 
 }

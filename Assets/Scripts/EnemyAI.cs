@@ -11,8 +11,8 @@ public class EnemyAI : MonoBehaviour
 
     public Transform player;
 
-    public GameObject Bullets;
-    public GameObject Barrel;
+    public GameObject bullets;
+    public GameObject barrel;
 
     public LayerMask whatIsGround, whatIsPlayer;
 
@@ -24,7 +24,6 @@ public class EnemyAI : MonoBehaviour
     //Attacking
     public float timeBetweenAttacks;
     bool alreadyAttacked;
-    bool beingAttacked;
 
     public float health;
 
@@ -32,10 +31,6 @@ public class EnemyAI : MonoBehaviour
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
 
-    //References
-
-    //public ParticleSystem part;
-    //public List<ParticleCollisionEvent> collisionEvents;
     private void Awake()
     {
         player = GameObject.Find("PlayerObj").transform;
@@ -119,13 +114,13 @@ public class EnemyAI : MonoBehaviour
 
         if(!alreadyAttacked)
         {
-            // Rigidbody rb = Instantiate(Bullets, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
+            // Rigidbody rb = Instantiate(bullets, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
             //rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
             //rb.AddForce(transform.up * 32f, ForceMode.Impulse);
 
-            GameObject bulletObject = Instantiate(Bullets);
-            bulletObject.transform.position = Barrel.transform.position + transform.forward;
-            bulletObject.transform.forward = Barrel.transform.forward;
+            GameObject bulletObject = Instantiate(bullets);
+            bulletObject.transform.position = barrel.transform.position + transform.forward;
+            bulletObject.transform.forward = barrel.transform.forward; /// Gun shooting from the barrel
 
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
@@ -144,11 +139,6 @@ public class EnemyAI : MonoBehaviour
         { 
             Invoke(nameof(DestroyEnemy), .1f); 
         }
-    }
-
-    private void BeingAttacked()
-    {
-        beingAttacked = false;
     }
 
     private void DestroyEnemy()

@@ -554,8 +554,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 137575146}
   player: {fileID: 1738962750}
-  Bullets: {fileID: 3987433363312717569, guid: e8ab9145a78f139498e9f8c9fee131cf, type: 3}
-  Barrel: {fileID: 113279985}
+  bullets: {fileID: 3987433363312717569, guid: e8ab9145a78f139498e9f8c9fee131cf, type: 3}
+  barrel: {fileID: 113279985}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
@@ -2823,6 +2823,7 @@ MonoBehaviour:
   walkSpeed: 7
   sprintSpeed: 10
   groundDrag: 5
+  playerHealth: 100
   jumpForce: 10
   jumpCoolDown: 0.25
   airMultiplier: 0.4
@@ -19626,7 +19627,7 @@ GameObject:
   - component: {fileID: 1709536511}
   - component: {fileID: 1709536510}
   m_Layer: 0
-  m_Name: Skip
+  m_Name: Skip2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19696,9 +19697,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2082845187}
-        m_TargetAssemblyTypeName: LoadScene, Assembly-CSharp
-        m_MethodName: SkipDialogue
+      - m_Target: {fileID: 759088242}
+        m_TargetAssemblyTypeName: QuestSystem, Assembly-CSharp
+        m_MethodName: QuynhSkip
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

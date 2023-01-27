@@ -23,4 +23,9 @@ public class LoadScene : MonoBehaviour
     {
         SceneManager.LoadScene("Prototyping");
     }
+
+    public void Options()
+    {
+        SceneManager.LoadScene("Options");
+    }
 }

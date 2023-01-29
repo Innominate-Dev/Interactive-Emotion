@@ -28,4 +28,16 @@ public class LoadScene : MonoBehaviour
     {
         SceneManager.LoadScene("Options");
     }
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene("Title Screen");
+    }
+    public void Retry()
+    {
+        SceneManager.LoadScene("Prototyping");
+    }
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }

@@ -191,6 +191,8 @@ public class PlayerController : MonoBehaviour
         if (playerHealth <= 0)
         {
             SceneManager.LoadScene("DeathScreen");
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
         }
     }
 

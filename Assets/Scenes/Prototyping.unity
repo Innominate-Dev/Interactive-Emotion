@@ -2958,6 +2958,7 @@ MonoBehaviour:
   isGrounded: 0
   orientation: {fileID: 1738962750}
   Player: {fileID: 1738962750}
+  health: {fileID: 1050638581}
   state: 0
 --- !u!4 &859414966
 Transform:

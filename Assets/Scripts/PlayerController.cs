@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -45,6 +47,8 @@ public class PlayerController : MonoBehaviour
     Vector3 moveDirection; ///////// DIRECTION THE PLAYER MOVES IN
 
     Rigidbody rb; /// PLAYER RIGID BODY
+
+    public TextMeshProUGUI health;
 
     /////////////////// MOVEMENT STATE ///////////////////
 
@@ -183,7 +187,8 @@ public class PlayerController : MonoBehaviour
     private void Health(int damage)
     {
         playerHealth -= damage;
-        if(playerHealth <= 0)
+        health.text = playerHealth + "/100";
+        if (playerHealth <= 0)
         {
             SceneManager.LoadScene("DeathScreen");
         }

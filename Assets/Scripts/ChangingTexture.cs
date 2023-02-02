@@ -11,9 +11,11 @@ public class ChangingTexture : MonoBehaviour
 
     public Renderer m_renderer;
 
+    public static int paintedObjects = 0;
+
     private void Awake()
     {
-        
+        var myList = FindObjectsOfType<ChangingTexture>();
     }
 
 
@@ -34,13 +36,14 @@ public class ChangingTexture : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Debug.Log(paintedObjects);
     }
     private void OnParticleCollision(GameObject other)
     {
         if(other.tag == "PaintCollision" && ChangedTexture == false)
         {
             StartCoroutine(TextureSwap());
+            paintedObjects++;
             ChangedTexture = true;
         }
     }

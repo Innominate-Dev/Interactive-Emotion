@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ChangingTexture : MonoBehaviour
 {
-    public Texture[] NewTexture;
+    public Material[] NewTexture;
     public int CurrentTexture;
 
     public bool ChangedTexture = false;
@@ -53,6 +53,6 @@ public class ChangingTexture : MonoBehaviour
         yield return new WaitForSeconds(1f);
         CurrentTexture++;
         CurrentTexture %= NewTexture.Length;
-        m_renderer.material.mainTexture = NewTexture[CurrentTexture];
+        m_renderer.material = NewTexture[CurrentTexture];
     }
 }

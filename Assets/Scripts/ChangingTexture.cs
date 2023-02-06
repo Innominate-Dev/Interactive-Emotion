@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ChangingTexture : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class ChangingTexture : MonoBehaviour
     public Renderer m_renderer;
 
     public static int paintedObjects = 0;
+    public Slider Progress;
 
     private void Awake()
     {
@@ -28,15 +30,12 @@ public class ChangingTexture : MonoBehaviour
         //myMat.SetTexture(1,NewTexture);
         //Debug.Log(myMat.mainTexture.ToString());
 
-        ///////////////////////////////////////
-
-    
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(paintedObjects);
+        //Debug.Log(paintedObjects);
     }
     private void OnParticleCollision(GameObject other)
     {
@@ -44,6 +43,7 @@ public class ChangingTexture : MonoBehaviour
         {
             StartCoroutine(TextureSwap());
             paintedObjects++;
+            Progress.value = paintedObjects;
             ChangedTexture = true;
         }
     }

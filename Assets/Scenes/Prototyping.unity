@@ -1840,6 +1840,41 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 166769188}
   m_CullTransparentMesh: 1
+--- !u!1 &186287743
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 186287744}
+  m_Layer: 5
+  m_Name: Splatpoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &186287744
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 186287743}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1566760802}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 140.39998, y: -0.00001335144}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &189442175
 GameObject:
   m_ObjectHideFlags: 0
@@ -2230,7 +2265,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!64 &232059267
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2705,7 +2743,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 307269202}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &373574859
+--- !u!1 &322443000
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2713,7 +2751,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 373574860}
+  - component: {fileID: 322443001}
   m_Layer: 5
   m_Name: Fill Area
   m_TagString: Untagged
@@ -2721,25 +2759,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &373574860
+--- !u!224 &322443001
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 373574859}
+  m_GameObject: {fileID: 322443000}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1351474750}
-  m_Father: {fileID: 1931312095}
-  m_RootOrder: 1
+  m_LocalScale: {x: 0.54263, y: 0.54263, z: 0.54263}
+  m_Children: []
+  m_Father: {fileID: 1502757231}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -5, y: 0}
-  m_SizeDelta: {x: -20, y: 0}
+  m_AnchoredPosition: {x: 0.23675537, y: 17.00003}
+  m_SizeDelta: {x: 172.13422, y: -40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &382135242
 GameObject:
@@ -4120,81 +4157,6 @@ Transform:
   m_Father: {fileID: 599122915}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &591601912
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 591601913}
-  - component: {fileID: 591601915}
-  - component: {fileID: 591601914}
-  m_Layer: 5
-  m_Name: Handle
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &591601913
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 591601912}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1735164762}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &591601914
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 591601912}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 45a7ce26ce60947d0b3b67d6c68042ca, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &591601915
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 591601912}
-  m_CullTransparentMesh: 1
 --- !u!1 &593106436
 GameObject:
   m_ObjectHideFlags: 0
@@ -4777,6 +4739,81 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 660058289}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &679751687
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 679751688}
+  - component: {fileID: 679751690}
+  - component: {fileID: 679751689}
+  m_Layer: 5
+  m_Name: Handle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &679751688
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679751687}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.54263, y: 0.54263, z: 0.54263}
+  m_Children: []
+  m_Father: {fileID: 1502757231}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 31.699966, y: 16.99997}
+  m_SizeDelta: {x: 20, y: -81.5712}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &679751689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679751687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 45a7ce26ce60947d0b3b67d6c68042ca, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &679751690
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679751687}
+  m_CullTransparentMesh: 1
 --- !u!1 &699175103
 GameObject:
   m_ObjectHideFlags: 0
@@ -23510,6 +23547,142 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1148228626}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1162146701
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1162146702}
+  - component: {fileID: 1162146704}
+  - component: {fileID: 1162146703}
+  m_Layer: 5
+  m_Name: CityPaintedPercentage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1162146702
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1162146701}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.12279981, y: 0.12279981, z: 0.12279981}
+  m_Children: []
+  m_Father: {fileID: 1502757231}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1.3, y: 26.69}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1162146703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1162146701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: '100%
+
+'
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: e892afe42b0ec4543a6263f80cfc1d5d, type: 2}
+  m_sharedMaterial: {fileID: 6048530388918676103, guid: e892afe42b0ec4543a6263f80cfc1d5d, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4288540490
+  m_fontColor: {r: 0.2901961, g: 0.93725497, b: 0.6156863, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 49.5
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 1
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: -1.943037, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1162146704
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1162146701}
+  m_CullTransparentMesh: 1
 --- !u!1 &1208553926
 GameObject:
   m_ObjectHideFlags: 0
@@ -23542,6 +23715,140 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1227832780
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1227832781}
+  - component: {fileID: 1227832783}
+  - component: {fileID: 1227832782}
+  m_Layer: 5
+  m_Name: CityPaintedTMP
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1227832781
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227832780}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.31286573, y: 0.31286573, z: 0.31286573}
+  m_Children: []
+  m_Father: {fileID: 1502757231}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1.3, y: 13.4}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1227832782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227832780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: City Painted
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 089da781300bc1847b8337687df88424, type: 2}
+  m_sharedMaterial: {fileID: 4930198768718588137, guid: 089da781300bc1847b8337687df88424, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 23.8
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 1
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: -1.943037, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1227832783
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227832780}
+  m_CullTransparentMesh: 1
 --- !u!1 &1228319731
 GameObject:
   m_ObjectHideFlags: 0
@@ -24303,81 +24610,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1333389256}
   m_Mesh: {fileID: 0}
---- !u!1 &1351474749
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1351474750}
-  - component: {fileID: 1351474752}
-  - component: {fileID: 1351474751}
-  m_Layer: 5
-  m_Name: Fill
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1351474750
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1351474749}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 373574860}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 10, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1351474751
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1351474749}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.29411766, g: 0.9372549, b: 0.6156863, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 45a7ce26ce60947d0b3b67d6c68042ca, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1351474752
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1351474749}
-  m_CullTransparentMesh: 1
 --- !u!1 &1352491908
 GameObject:
   m_ObjectHideFlags: 0
@@ -25133,7 +25365,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!64 &1452514940
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -25641,6 +25876,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1264555521}
+  - {fileID: 1641965480}
   m_Father: {fileID: 1472154558}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -25772,7 +26008,13 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 4.9149055, y: 4.9149055, z: 4.9149055}
   m_Children:
-  - {fileID: 1931312095}
+  - {fileID: 1900575259}
+  - {fileID: 2037099608}
+  - {fileID: 322443001}
+  - {fileID: 679751688}
+  - {fileID: 1566760802}
+  - {fileID: 1227832781}
+  - {fileID: 1162146702}
   m_Father: {fileID: 528080739}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -25781,7 +26023,7 @@ RectTransform:
   m_AnchoredPosition: {x: -456, y: -550}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1505755043
+--- !u!1 &1566760801
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -25789,42 +26031,43 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1505755044}
-  - component: {fileID: 1505755046}
-  - component: {fileID: 1505755045}
+  - component: {fileID: 1566760802}
+  - component: {fileID: 1566760804}
+  - component: {fileID: 1566760803}
   m_Layer: 5
-  m_Name: Background
+  m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &1505755044
+--- !u!224 &1566760802
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1505755043}
+  m_GameObject: {fileID: 1566760801}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1931312095}
-  m_RootOrder: 0
+  m_LocalScale: {x: 0.54263, y: 0.54263, z: 0.54263}
+  m_Children:
+  - {fileID: 186287744}
+  m_Father: {fileID: 1502757231}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.25}
-  m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1505755045
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -26.310486, y: 17.00003}
+  m_SizeDelta: {x: 182.13422, y: -90}
+  m_Pivot: {x: 0, y: 0.5}
+--- !u!114 &1566760803
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1505755043}
+  m_GameObject: {fileID: 1566760801}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -25838,7 +26081,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5369c8d12601343b79a9b32d184ebd78, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3da3d6639bb1ed84aa2a8fecb166c8e6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -25848,13 +26091,13 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!222 &1505755046
+--- !u!222 &1566760804
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1505755043}
+  m_GameObject: {fileID: 1566760801}
   m_CullTransparentMesh: 1
 --- !u!1 &1570109160
 GameObject:
@@ -26304,7 +26547,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1587809472}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1606711563
+--- !u!1 &1641965479
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -26312,131 +26555,69 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1606711564}
-  - component: {fileID: 1606711566}
-  - component: {fileID: 1606711565}
+  - component: {fileID: 1641965480}
+  - component: {fileID: 1641965482}
+  - component: {fileID: 1641965481}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Blurrythingy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &1606711564
+--- !u!224 &1641965480
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1606711563}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_GameObject: {fileID: 1641965479}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.85143375, y: 0.85143375, z: 0.85143375}
+  m_LocalScale: {x: 7.9754, y: 7.9754, z: 7.9754}
   m_Children: []
-  m_Father: {fileID: 1735164762}
+  m_Father: {fileID: 1494077581}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -6.4, y: -12.8}
-  m_SizeDelta: {x: 160.7899, y: 40.1975}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1606711565
+--- !u!114 &1641965481
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1606711563}
+  m_GameObject: {fileID: 1641965479}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.74509805}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: city painted
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 089da781300bc1847b8337687df88424, type: 2}
-  m_sharedMaterial: {fileID: 4930198768718588137, guid: 089da781300bc1847b8337687df88424, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
+  m_Texture: {fileID: 2800000, guid: b730d4fe900cf4cfa95c402fa0a9bf43, type: 3}
+  m_UVRect:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 8.05
-  m_fontSizeBase: 36
-  m_fontWeight: 400
-  m_enableAutoSizing: 1
-  m_fontSizeMin: 1
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 1
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 50.937386, y: 0, z: 8.967457, w: 30.505648}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &1606711566
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &1641965482
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1606711563}
+  m_GameObject: {fileID: 1641965479}
   m_CullTransparentMesh: 1
 --- !u!1 &1644460625
 GameObject:
@@ -27253,43 +27434,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1729860080}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1735164761
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1735164762}
-  m_Layer: 5
-  m_Name: Handle Slide Area
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1735164762
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1735164761}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 591601913}
-  - {fileID: 1606711564}
-  m_Father: {fileID: 1931312095}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -20, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1738962749
 GameObject:
   m_ObjectHideFlags: 0
@@ -33335,6 +33479,81 @@ Transform:
   m_Father: {fileID: 1738962750}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1900575258
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1900575259}
+  - component: {fileID: 1900575261}
+  - component: {fileID: 1900575260}
+  m_Layer: 5
+  m_Name: Background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1900575259
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1900575258}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1502757231}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.25}
+  m_AnchorMax: {x: 1, y: 0.75}
+  m_AnchoredPosition: {x: 0, y: 17.000002}
+  m_SizeDelta: {x: 60, y: -40}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1900575260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1900575258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 5369c8d12601343b79a9b32d184ebd78, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1900575261
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1900575258}
+  m_CullTransparentMesh: 1
 --- !u!1 &1929275637
 GameObject:
   m_ObjectHideFlags: 0
@@ -33468,96 +33687,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1929275637}
   m_CullTransparentMesh: 1
---- !u!1 &1931312094
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1931312095}
-  - component: {fileID: 1931312096}
-  m_Layer: 5
-  m_Name: CityProgressSlider
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1931312095
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1931312094}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.2368, y: 1.2368, z: 1.2368}
-  m_Children:
-  - {fileID: 1505755044}
-  - {fileID: 373574860}
-  - {fileID: 1735164762}
-  m_Father: {fileID: 1502757231}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 12.9}
-  m_SizeDelta: {x: 160, y: 20}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1931312096
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1931312094}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 591601914}
-  m_FillRect: {fileID: 1351474750}
-  m_HandleRect: {fileID: 591601913}
-  m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 183
-  m_WholeNumbers: 1
-  m_Value: 0
-  m_OnValueChanged:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &1939655587
 GameObject:
   m_ObjectHideFlags: 0
@@ -34319,6 +34448,41 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &2037099607
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2037099608}
+  m_Layer: 5
+  m_Name: Handle Slide Area
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2037099608
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2037099607}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.54263, y: 0.54263, z: 0.54263}
+  m_Children: []
+  m_Father: {fileID: 1502757231}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 4.277, y: 16.999992}
+  m_SizeDelta: {x: 210.62439, y: -81.5712}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2055982607
 GameObject:
   m_ObjectHideFlags: 0
@@ -34977,7 +35141,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!33 &41285021551431851
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -35903,7 +36070,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!33 &82885461733677045
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -36030,7 +36200,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!23 &112860206988567156
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -36181,7 +36354,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!23 &129822231335767982
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -36313,7 +36489,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!23 &157535267502424322
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -36463,7 +36642,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!33 &168060746012339085
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -36540,7 +36722,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!4 &173825313248166778
 Transform:
   m_ObjectHideFlags: 0
@@ -36708,7 +36893,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!1 &212837507118903824
 GameObject:
   m_ObjectHideFlags: 0
@@ -37032,7 +37220,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!114 &287606235670155788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37169,7 +37360,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!1 &312473604984710588
 GameObject:
   m_ObjectHideFlags: 0
@@ -37237,7 +37431,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!1 &314277205086695966
 GameObject:
   m_ObjectHideFlags: 0
@@ -37398,7 +37595,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!114 &333182124250083729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37701,7 +37901,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!1 &389985027251681681
 GameObject:
   m_ObjectHideFlags: 0
@@ -37771,7 +37974,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!114 &389985027251681685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37902,7 +38108,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!1 &406522826877102992
 GameObject:
   m_ObjectHideFlags: 0
@@ -38145,7 +38354,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!1 &433015480044105400
 GameObject:
   m_ObjectHideFlags: 0
@@ -38670,7 +38882,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!1 &509645990956701400
 GameObject:
   m_ObjectHideFlags: 0
@@ -38803,7 +39018,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!1 &518424550856494253
 GameObject:
   m_ObjectHideFlags: 0
@@ -38873,7 +39091,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!114 &518424550856494257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39032,7 +39253,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!23 &546460278955964124
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -39184,7 +39408,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!114 &563414463953496924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39280,7 +39507,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!23 &591239893773701520
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -39600,7 +39830,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!114 &639220946708821370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40071,7 +40304,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!23 &717717424061552716
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -41278,7 +41514,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!4 &931476074221397899
 Transform:
   m_ObjectHideFlags: 0
@@ -41361,7 +41600,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!23 &940759419758917936
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -41536,7 +41778,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!1 &979311616002476746
 GameObject:
   m_ObjectHideFlags: 0
@@ -41733,7 +41978,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!33 &987521578722864525
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -41859,7 +42107,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!1 &998558266624058879
 GameObject:
   m_ObjectHideFlags: 0
@@ -42029,7 +42280,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!114 &1000922893389033677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42182,7 +42436,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!4 &1020055570281370581
 Transform:
   m_ObjectHideFlags: 0
@@ -42597,7 +42854,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!4 &1118399975810576262
 Transform:
   m_ObjectHideFlags: 0
@@ -43618,7 +43878,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!23 &1343015389939345089
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -43786,7 +44049,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!23 &1357695226402635383
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -44003,7 +44269,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!4 &1396199221982878252
 Transform:
   m_ObjectHideFlags: 0
@@ -44182,7 +44451,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!33 &1412349128725365565
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -44268,7 +44540,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!114 &1417969453771531289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44628,7 +44903,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!4 &1498579538323646083
 Transform:
   m_ObjectHideFlags: 0
@@ -45103,7 +45381,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!1 &1588534198474369627
 GameObject:
   m_ObjectHideFlags: 0
@@ -45574,7 +45855,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!4 &1632839437599919289
 Transform:
   m_ObjectHideFlags: 0
@@ -45737,7 +46021,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!114 &1659905464631877655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46094,7 +46381,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!23 &1703872814180735780
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -46284,7 +46574,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!33 &1727558247343143881
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -46585,7 +46878,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!33 &1790938639968363386
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -46774,7 +47070,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!23 &1821866748313468969
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -47133,7 +47432,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!114 &1874252959330333705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47150,7 +47452,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 0}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!4 &1882602766972643488
 Transform:
   m_ObjectHideFlags: 0
@@ -47261,7 +47566,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!33 &1939887720385674251
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -47550,7 +47858,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!33 &1996277790814005651
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -47750,7 +48061,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!33 &2028172403478598005
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -47966,7 +48280,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!4 &2053208766737942297
 Transform:
   m_ObjectHideFlags: 0
@@ -48229,7 +48546,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!114 &2078841723915893480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48490,7 +48810,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!114 &2099184698326606012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48719,7 +49042,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!23 &2133229913009031569
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -48845,7 +49171,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!23 &2154092416650010199
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -48969,7 +49298,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!23 &2162773363615211212
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -49210,7 +49542,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!23 &2192147792802589149
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -50312,7 +50647,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!33 &2347384196744292423
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -50584,7 +50922,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!114 &2416321832951441515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51163,7 +51504,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!1 &2505922268994892738
 GameObject:
   m_ObjectHideFlags: 0
@@ -51362,7 +51706,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!33 &2562501175135868804
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -51439,7 +51786,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!23 &2564906467589701044
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -51622,7 +51972,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!33 &2583933579794964432
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -51729,7 +52082,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!23 &2600558895690672115
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -52008,7 +52364,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!33 &2626021984903033699
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -52618,7 +52977,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!1 &2694039360259293828
 GameObject:
   m_ObjectHideFlags: 0
@@ -52807,7 +53169,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!114 &2716350600662874469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53000,7 +53365,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!1 &2747211723842124782
 GameObject:
   m_ObjectHideFlags: 0
@@ -54175,7 +54543,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!23 &2914493514697822765
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -54376,7 +54747,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!33 &2933871479673308420
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -55206,7 +55580,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!1 &3119115339571155080
 GameObject:
   m_ObjectHideFlags: 0
@@ -55475,7 +55852,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!23 &3170814844138845610
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -55916,7 +56296,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!33 &3237136171536259029
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -55993,7 +56376,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!33 &3245596719530011126
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -56478,7 +56864,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!1 &3337042062961651688
 GameObject:
   m_ObjectHideFlags: 0
@@ -56698,7 +57087,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!114 &3377467777980161758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56830,7 +57222,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!4 &3409158863697648283
 Transform:
   m_ObjectHideFlags: 0
@@ -57462,7 +57857,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!33 &3496714591956734891
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -57878,7 +58276,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!23 &3602530043470133792
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -57988,7 +58389,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!1 &3610747730393210226
 GameObject:
   m_ObjectHideFlags: 0
@@ -58177,7 +58581,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!114 &3631488315626961936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58481,7 +58888,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!1 &3686186556605537514
 GameObject:
   m_ObjectHideFlags: 0
@@ -58984,7 +59394,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!33 &3772125940661690144
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -59226,7 +59639,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!23 &3794718743491235176
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -59337,7 +59753,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!4 &3799716375944046244
 Transform:
   m_ObjectHideFlags: 0
@@ -59525,7 +59944,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!33 &3812971330534361546
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -59757,7 +60179,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!33 &3860537895684947703
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -59885,7 +60310,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!114 &3873179729193807825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60492,7 +60920,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!33 &3968542231547885298
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -60682,7 +61113,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!23 &3987371921359059448
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -61093,7 +61527,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!114 &4044901576936427671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61412,7 +61849,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!33 &4098999836543902942
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -61635,7 +62075,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!114 &4125632409998553687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62138,7 +62581,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!114 &4202820166457367483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62465,7 +62911,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!4 &4251698683825535739
 Transform:
   m_ObjectHideFlags: 0
@@ -62667,7 +63116,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!114 &4277499696984241376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62944,7 +63396,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!4 &4322216946439029356
 Transform:
   m_ObjectHideFlags: 0
@@ -63098,7 +63553,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!23 &4351927051058327536
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -63208,7 +63666,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!23 &4355846182807293625
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -63705,7 +64166,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!4 &4400824954291207758
 Transform:
   m_ObjectHideFlags: 0
@@ -63834,7 +64298,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!114 &4428737832354887731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64138,7 +64605,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!23 &4481580676673899613
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -64396,7 +64866,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!4 &4512630035541608645
 Transform:
   m_ObjectHideFlags: 0
@@ -64910,7 +65383,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!23 &4578685916468318349
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -65461,7 +65937,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!4 &4643767959819967687
 Transform:
   m_ObjectHideFlags: 0
@@ -65560,7 +66039,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!4 &4653460969396735417
 Transform:
   m_ObjectHideFlags: 0
@@ -65659,7 +66141,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!4 &4689894915142105533
 Transform:
   m_ObjectHideFlags: 0
@@ -65920,7 +66405,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!1 &4735994405944150861
 GameObject:
   m_ObjectHideFlags: 0
@@ -66036,7 +66524,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!4 &4749209012786290253
 Transform:
   m_ObjectHideFlags: 0
@@ -66120,7 +66611,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!114 &4751306900907632827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91618,7 +92112,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!33 &4960910283115293549
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -91932,7 +92429,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!114 &5030411553014773569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92109,7 +92609,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!114 &5064648472265510027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92752,7 +93255,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!33 &5177755936301531090
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -93089,7 +93595,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!4 &5263918364709483655
 Transform:
   m_ObjectHideFlags: 0
@@ -93397,7 +93906,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!4 &5320004326983220894
 Transform:
   m_ObjectHideFlags: 0
@@ -93579,7 +94091,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!1 &5361563011456387027
 GameObject:
   m_ObjectHideFlags: 0
@@ -93630,7 +94145,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!4 &5380615556334897070
 Transform:
   m_ObjectHideFlags: 0
@@ -93737,7 +94255,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!4 &5400309988401265734
 Transform:
   m_ObjectHideFlags: 0
@@ -94083,7 +94604,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!114 &5477517017922338782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94206,7 +94730,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!33 &5495554108047955634
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -94443,7 +94970,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!4 &5533084734954000635
 Transform:
   m_ObjectHideFlags: 0
@@ -94581,7 +95111,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!1 &5543751808432479738
 GameObject:
   m_ObjectHideFlags: 0
@@ -94714,7 +95247,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!23 &5551913912020342646
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -95749,7 +96285,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!114 &5687197661621408844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96120,7 +96659,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!1 &5737966779841518119
 GameObject:
   m_ObjectHideFlags: 0
@@ -96627,7 +97169,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!23 &5809556457229908058
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -96751,7 +97296,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!23 &5826081032451690528
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -96869,7 +97417,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!23 &5836212184829438892
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -97306,7 +97857,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!23 &5892351758947884689
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -97553,7 +98107,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!1 &5931197800409079832
 GameObject:
   m_ObjectHideFlags: 0
@@ -97622,7 +98179,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!4 &5934126754624319972
 Transform:
   m_ObjectHideFlags: 0
@@ -98099,7 +98659,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!4 &5983942479900306805
 Transform:
   m_ObjectHideFlags: 0
@@ -98254,7 +98817,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!33 &5997171374293244627
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -98596,7 +99162,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!33 &6045269533283409326
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -98745,7 +99314,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!1 &6054370568741874194
 GameObject:
   m_ObjectHideFlags: 0
@@ -99318,7 +99890,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!33 &6150944897284210586
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -100025,7 +100600,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!33 &6232461313871577139
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -100500,7 +101078,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!4 &6335743372535411481
 Transform:
   m_ObjectHideFlags: 0
@@ -100597,7 +101178,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!4 &6348307764347053111
 Transform:
   m_ObjectHideFlags: 0
@@ -100733,7 +101317,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!4 &6362987299082663166
 Transform:
   m_ObjectHideFlags: 0
@@ -100830,7 +101417,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!1 &6371975333590927969
 GameObject:
   m_ObjectHideFlags: 0
@@ -100900,7 +101490,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!114 &6371975333590927973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101160,7 +101753,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!114 &6430199704873112959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101495,7 +102091,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!23 &6470756997514393295
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -101760,7 +102359,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!4 &6517460116187083792
 Transform:
   m_ObjectHideFlags: 0
@@ -101843,7 +102445,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!4 &6520772645382311891
 Transform:
   m_ObjectHideFlags: 0
@@ -102984,7 +103589,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!114 &6716678694926327553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -103185,7 +103793,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!4 &6770451699671235463
 Transform:
   m_ObjectHideFlags: 0
@@ -103400,7 +104011,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!1 &6833248380792493878
 GameObject:
   m_ObjectHideFlags: 0
@@ -103469,7 +104083,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!4 &6835497073409267697
 Transform:
   m_ObjectHideFlags: 0
@@ -103552,7 +104169,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!4 &6848243719694375508
 Transform:
   m_ObjectHideFlags: 0
@@ -103635,7 +104255,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!33 &6862036757823017639
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -103920,7 +104543,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!114 &6888886726339568314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -104135,7 +104761,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!1 &6913452356258284605
 GameObject:
   m_ObjectHideFlags: 0
@@ -104314,7 +104943,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!1 &6939957877522161998
 GameObject:
   m_ObjectHideFlags: 0
@@ -104709,7 +105341,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!23 &7015726038781194107
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -105006,7 +105641,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!114 &7111363714236393484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105160,7 +105798,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!23 &7145032827323220883
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -106057,7 +106698,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!4 &7274391683046978143
 Transform:
   m_ObjectHideFlags: 0
@@ -106357,7 +107001,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!33 &7330337323792305398
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -106434,7 +107081,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!33 &7348142314767925502
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -106512,7 +107162,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!114 &7348881557661978560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106595,7 +107248,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!114 &7349193092715188239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106864,7 +107520,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!4 &7381983075564389150
 Transform:
   m_ObjectHideFlags: 0
@@ -107042,7 +107701,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!114 &7399995401403725452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107138,7 +107800,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!1 &7407870262023164295
 GameObject:
   m_ObjectHideFlags: 0
@@ -107207,7 +107872,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!4 &7408290627160242127
 Transform:
   m_ObjectHideFlags: 0
@@ -107290,7 +107958,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!23 &7419779633870334254
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -108054,7 +108725,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!1 &7473459760999765353
 GameObject:
   m_ObjectHideFlags: 0
@@ -108336,7 +109010,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!33 &7510653818326374791
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -108477,7 +109154,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!114 &7520969077898348436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109058,7 +109738,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!4 &7618392140446736889
 Transform:
   m_ObjectHideFlags: 0
@@ -109142,7 +109825,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!114 &7627940787968474810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109351,7 +110037,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!23 &7688362538679195332
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -109723,7 +110412,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!4 &7756431072327109578
 Transform:
   m_ObjectHideFlags: 0
@@ -110183,7 +110875,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!1 &7820960367661531130
 GameObject:
   m_ObjectHideFlags: 0
@@ -110498,7 +111193,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!1 &7865730972504959226
 GameObject:
   m_ObjectHideFlags: 0
@@ -110567,7 +111265,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!33 &7874211579386539464
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -110956,7 +111657,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!1 &7980189092394485824
 GameObject:
   m_ObjectHideFlags: 0
@@ -111074,7 +111778,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!1 &7982387306713391889
 GameObject:
   m_ObjectHideFlags: 0
@@ -111583,7 +112290,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!1 &8070045148238221047
 GameObject:
   m_ObjectHideFlags: 0
@@ -111743,7 +112453,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!4 &8089784984804088409
 Transform:
   m_ObjectHideFlags: 0
@@ -112331,7 +113044,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!114 &8179675813312609407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112895,7 +113611,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!114 &8253794908395628700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113128,7 +113847,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!114 &8266231030405419814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113292,7 +114014,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!4 &8315329295750992225
 Transform:
   m_ObjectHideFlags: 0
@@ -113567,7 +114292,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!1 &8340789399304204910
 GameObject:
   m_ObjectHideFlags: 0
@@ -113636,7 +114364,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!33 &8353338757903442431
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -113780,7 +114511,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!33 &8373044406390934390
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -113873,7 +114607,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!4 &8399115382318765211
 Transform:
   m_ObjectHideFlags: 0
@@ -114578,7 +115315,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!23 &8583007156760806695
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -115151,7 +115891,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!33 &8680964832102347376
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -115228,7 +115971,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!1 &8691059671689057078
 GameObject:
   m_ObjectHideFlags: 0
@@ -115297,7 +116043,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!1 &8692451529500089018
 GameObject:
   m_ObjectHideFlags: 0
@@ -115480,7 +116229,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!33 &8754574561760248079
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -115703,7 +116455,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!1 &8769490748500969352
 GameObject:
   m_ObjectHideFlags: 0
@@ -116006,7 +116761,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!1 &8821428883523671753
 GameObject:
   m_ObjectHideFlags: 0
@@ -116075,7 +116833,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!1 &8825613672363642110
 GameObject:
   m_ObjectHideFlags: 0
@@ -116145,7 +116906,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!114 &8825613672363642114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116473,7 +117237,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!23 &8899522294204084841
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -116913,7 +117680,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!114 &8932187832992723386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117107,7 +117877,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!1 &8965231802885312621
 GameObject:
   m_ObjectHideFlags: 0
@@ -117654,7 +118427,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!1 &9051066332864840051
 GameObject:
   m_ObjectHideFlags: 0
@@ -118411,7 +119187,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!33 &9153347724247857101
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -118790,7 +119569,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!23 &9198848433009105345
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -118900,7 +119682,10 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  Progress: {fileID: 1931312096}
+  handle: {fileID: 0}
+  splatPoint: {fileID: 0}
+  PercentagePOS: {fileID: 0}
+  Percentage: {fileID: 0}
 --- !u!23 &9209636397209572669
 MeshRenderer:
   m_ObjectHideFlags: 0

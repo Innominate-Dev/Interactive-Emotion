@@ -25,8 +25,9 @@ public class ChangingTexture : MonoBehaviour
 
     public RectTransform handle;
     public RectTransform splatPoint;
-    public RectTransform PercentagePOS;
     public TextMeshProUGUI Percentage;
+
+    private RectTransform PercentagePOS;
 
     private void Awake()
     {

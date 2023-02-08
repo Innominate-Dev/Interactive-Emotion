@@ -2265,10 +2265,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!64 &232059267
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3390,8 +3389,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 461800926}
   m_LocalRotation: {x: -0.5, y: -0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: -162.3, y: 0.4, z: 28.8}
-  m_LocalScale: {x: 0.27588663, y: 295.85223, z: 241.43703}
+  m_LocalPosition: {x: -162.3, y: 0.4, z: 29.7883}
+  m_LocalScale: {x: 0.27588663, y: 297.83444, z: 241.43703}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 22
@@ -5842,6 +5841,81 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 768148810}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &795423766
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 795423767}
+  - component: {fileID: 795423769}
+  - component: {fileID: 795423768}
+  m_Layer: 5
+  m_Name: BG
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &795423767
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795423766}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2139044183}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &795423768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795423766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &795423769
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795423766}
+  m_CullTransparentMesh: 1
 --- !u!1 &803043998
 GameObject:
   m_ObjectHideFlags: 0
@@ -6661,6 +6735,12 @@ MonoBehaviour:
   jumpCoolDown: 0.25
   airMultiplier: 0.4
   gravity: -19.81
+  walkBobSpeed: 14
+  walkBobAmount: 0.05
+  sprintBobSpeed: 18
+  sprintBobAmount: 0.11
+  crouchBobSpeed: 8
+  crouchBobAmount: 0.25
   jumpKey: 32
   sprintKey: 304
   playerHeight: 2
@@ -6670,6 +6750,7 @@ MonoBehaviour:
   isGrounded: 0
   orientation: {fileID: 1738962750}
   Player: {fileID: 1738962750}
+  playerCamera: {fileID: 759088238}
   health: {fileID: 1050638581}
   state: 0
 --- !u!4 &859414966
@@ -25365,10 +25446,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!64 &1452514940
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -25547,6 +25627,7 @@ RectTransform:
   - {fileID: 1303728716}
   - {fileID: 1494077581}
   - {fileID: 528080739}
+  - {fileID: 2139044183}
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -34869,6 +34950,42 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OffersButton: {fileID: 1310871653}
+--- !u!1 &2139044182
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2139044183}
+  m_Layer: 5
+  m_Name: Introduction
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &2139044183
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2139044182}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 19.367697, y: 10.788, z: 10.788}
+  m_Children:
+  - {fileID: 795423767}
+  m_Father: {fileID: 1472154558}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &2669454401444209
 Transform:
   m_ObjectHideFlags: 0
@@ -35141,10 +35258,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!33 &41285021551431851
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -36016,6 +36132,7 @@ GameObject:
   - component: {fileID: 77781030931556256}
   - component: {fileID: 77781030931556257}
   - component: {fileID: 77781030931556258}
+  - component: {fileID: 77781030931556259}
   m_Layer: 0
   m_Name: Cylinder.036
   m_TagString: Untagged
@@ -36070,10 +36187,22 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
+--- !u!65 &77781030931556259
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 77781030931556255}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.019999998, y: 0.019999998, z: 0.020000003}
+  m_Center: {x: 0.00000011920929, y: -1.2407709e-24, z: 0.0000000013969839}
 --- !u!33 &82885461733677045
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -36200,10 +36329,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!23 &112860206988567156
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -36354,10 +36482,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!23 &129822231335767982
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -36489,10 +36616,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!23 &157535267502424322
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -36589,6 +36715,7 @@ GameObject:
   - component: {fileID: 165800445710095591}
   - component: {fileID: 165800445710095592}
   - component: {fileID: 165800445710095593}
+  - component: {fileID: 165800445710095594}
   m_Layer: 0
   m_Name: Cylinder.038
   m_TagString: Untagged
@@ -36642,10 +36769,22 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
+--- !u!65 &165800445710095594
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165800445710095590}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.02, z: 0.020000001}
+  m_Center: {x: 0, y: 0, z: 0.000000059604645}
 --- !u!33 &168060746012339085
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -36722,10 +36861,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!4 &173825313248166778
 Transform:
   m_ObjectHideFlags: 0
@@ -36893,10 +37031,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!1 &212837507118903824
 GameObject:
   m_ObjectHideFlags: 0
@@ -37220,10 +37357,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!114 &287606235670155788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37360,10 +37496,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!1 &312473604984710588
 GameObject:
   m_ObjectHideFlags: 0
@@ -37431,10 +37566,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!1 &314277205086695966
 GameObject:
   m_ObjectHideFlags: 0
@@ -37448,6 +37582,7 @@ GameObject:
   - component: {fileID: 8899522294204084841}
   - component: {fileID: 314277205086695967}
   - component: {fileID: 314277205086695968}
+  - component: {fileID: 314277205086695969}
   m_Layer: 0
   m_Name: Cube.168
   m_TagString: Untagged
@@ -37485,6 +37620,19 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
+--- !u!65 &314277205086695969
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 314277205086695966}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.020000001, z: 0.019999996}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &332305254419690800
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -37539,7 +37687,6 @@ GameObject:
   - component: {fileID: 688298400263170424}
   - component: {fileID: 333182124250083726}
   - component: {fileID: 333182124250083727}
-  - component: {fileID: 333182124250083728}
   - component: {fileID: 333182124250083729}
   m_Layer: 0
   m_Name: Cube.008
@@ -37578,27 +37725,6 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0.015000001}
   m_TimeToStationary: 0.5
---- !u!114 &333182124250083728
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 333182124250083725}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ea6f09149b6ceb4d853303301941d10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NewTexture:
-  - {fileID: 2800000, guid: 9834a9afec3e16c4bbebdfa0f0cc67d1, type: 3}
-  CurrentTexture: 0
-  ChangedTexture: 0
-  m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
 --- !u!114 &333182124250083729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37847,6 +37973,7 @@ GameObject:
   - component: {fileID: 383689066611101006}
   - component: {fileID: 383689066611101007}
   - component: {fileID: 383689066611101008}
+  - component: {fileID: 383689066611101009}
   m_Layer: 0
   m_Name: Cube.157
   m_TagString: Untagged
@@ -37901,10 +38028,22 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
+--- !u!65 &383689066611101009
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383689066611101005}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.019999996, z: 0.020000001}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &389985027251681681
 GameObject:
   m_ObjectHideFlags: 0
@@ -37918,7 +38057,6 @@ GameObject:
   - component: {fileID: 5785255058765555485}
   - component: {fileID: 389985027251681682}
   - component: {fileID: 389985027251681683}
-  - component: {fileID: 389985027251681684}
   - component: {fileID: 389985027251681685}
   m_Layer: 0
   m_Name: Cube.060
@@ -37957,27 +38095,6 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0.001, y: -0.020000001, z: 0.016}
   m_TimeToStationary: 0.5
---- !u!114 &389985027251681684
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 389985027251681681}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ea6f09149b6ceb4d853303301941d10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NewTexture:
-  - {fileID: 2800000, guid: 9834a9afec3e16c4bbebdfa0f0cc67d1, type: 3}
-  CurrentTexture: 0
-  ChangedTexture: 0
-  m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
 --- !u!114 &389985027251681685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38108,10 +38225,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!1 &406522826877102992
 GameObject:
   m_ObjectHideFlags: 0
@@ -38350,14 +38466,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NewTexture:
-  - {fileID: 2800000, guid: 9834a9afec3e16c4bbebdfa0f0cc67d1, type: 3}
+  - {fileID: 2100000, guid: a4a7bccbd4ad84854b4af33142f2b671, type: 2}
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!1 &433015480044105400
 GameObject:
   m_ObjectHideFlags: 0
@@ -38882,10 +38997,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!1 &509645990956701400
 GameObject:
   m_ObjectHideFlags: 0
@@ -39018,10 +39132,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!1 &518424550856494253
 GameObject:
   m_ObjectHideFlags: 0
@@ -39035,7 +39148,6 @@ GameObject:
   - component: {fileID: 1600321372876473410}
   - component: {fileID: 518424550856494254}
   - component: {fileID: 518424550856494255}
-  - component: {fileID: 518424550856494256}
   - component: {fileID: 518424550856494257}
   m_Layer: 0
   m_Name: Cube.061
@@ -39074,27 +39186,6 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0.001, y: -0.028, z: 0.015000001}
   m_TimeToStationary: 0.5
---- !u!114 &518424550856494256
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 518424550856494253}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ea6f09149b6ceb4d853303301941d10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NewTexture:
-  - {fileID: 2800000, guid: 9834a9afec3e16c4bbebdfa0f0cc67d1, type: 3}
-  CurrentTexture: 0
-  ChangedTexture: 0
-  m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
 --- !u!114 &518424550856494257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39198,7 +39289,6 @@ GameObject:
   - component: {fileID: 5839268134108334944}
   - component: {fileID: 544536676970592418}
   - component: {fileID: 544536676970592419}
-  - component: {fileID: 544536676970592420}
   m_Layer: 0
   m_Name: Cube.199
   m_TagString: Untagged
@@ -39236,27 +39326,6 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0.025}
   m_TimeToStationary: 0.5
---- !u!114 &544536676970592420
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 544536676970592417}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ea6f09149b6ceb4d853303301941d10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NewTexture:
-  - {fileID: 2800000, guid: 9834a9afec3e16c4bbebdfa0f0cc67d1, type: 3}
-  CurrentTexture: 0
-  ChangedTexture: 0
-  m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
 --- !u!23 &546460278955964124
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -39408,10 +39477,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!114 &563414463953496924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39507,10 +39575,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!23 &591239893773701520
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -39774,7 +39841,6 @@ GameObject:
   - component: {fileID: 4515008364250168047}
   - component: {fileID: 639220946708821367}
   - component: {fileID: 639220946708821368}
-  - component: {fileID: 639220946708821369}
   - component: {fileID: 639220946708821370}
   m_Layer: 0
   m_Name: Cube.100
@@ -39813,27 +39879,6 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0.001, y: -0.028, z: 0.015000001}
   m_TimeToStationary: 0.5
---- !u!114 &639220946708821369
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 639220946708821366}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ea6f09149b6ceb4d853303301941d10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NewTexture:
-  - {fileID: 2800000, guid: 9834a9afec3e16c4bbebdfa0f0cc67d1, type: 3}
-  CurrentTexture: 0
-  ChangedTexture: 0
-  m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
 --- !u!114 &639220946708821370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40304,10 +40349,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!23 &717717424061552716
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -41514,10 +41558,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!4 &931476074221397899
 Transform:
   m_ObjectHideFlags: 0
@@ -41600,10 +41643,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!23 &940759419758917936
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -41778,10 +41820,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!1 &979311616002476746
 GameObject:
   m_ObjectHideFlags: 0
@@ -41978,10 +42019,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!33 &987521578722864525
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -42107,10 +42147,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!1 &998558266624058879
 GameObject:
   m_ObjectHideFlags: 0
@@ -42224,8 +42263,8 @@ GameObject:
   - component: {fileID: 332305254419690800}
   - component: {fileID: 1000922893389033674}
   - component: {fileID: 1000922893389033675}
-  - component: {fileID: 1000922893389033676}
   - component: {fileID: 1000922893389033677}
+  - component: {fileID: 1000922893389033676}
   m_Layer: 0
   m_Name: Cube.135
   m_TagString: Untagged
@@ -42263,27 +42302,19 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
---- !u!114 &1000922893389033676
-MonoBehaviour:
+--- !u!65 &1000922893389033676
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000922893389033673}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ea6f09149b6ceb4d853303301941d10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NewTexture:
-  - {fileID: 2800000, guid: 9834a9afec3e16c4bbebdfa0f0cc67d1, type: 3}
-  CurrentTexture: 0
-  ChangedTexture: 0
-  m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.019999996, z: 0.02}
+  m_Center: {x: 0, y: -0.000000059604645, z: 0}
 --- !u!114 &1000922893389033677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42436,10 +42467,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!4 &1020055570281370581
 Transform:
   m_ObjectHideFlags: 0
@@ -42854,10 +42884,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!4 &1118399975810576262
 Transform:
   m_ObjectHideFlags: 0
@@ -43878,10 +43907,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!23 &1343015389939345089
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -44049,10 +44077,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!23 &1357695226402635383
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -44269,10 +44296,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!4 &1396199221982878252
 Transform:
   m_ObjectHideFlags: 0
@@ -44451,10 +44477,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!33 &1412349128725365565
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -44540,10 +44565,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!114 &1417969453771531289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44849,6 +44873,7 @@ GameObject:
   - component: {fileID: 1489453462031771548}
   - component: {fileID: 1489453462031771549}
   - component: {fileID: 1489453462031771550}
+  - component: {fileID: 1489453462031771551}
   m_Layer: 0
   m_Name: Cube.125
   m_TagString: Untagged
@@ -44903,10 +44928,22 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
+--- !u!65 &1489453462031771551
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489453462031771547}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.020000001, y: 0.022565892, z: 0.039975878}
+  m_Center: {x: -0.0000019073486, y: 0.000000015832484, z: 0.0095967995}
 --- !u!4 &1498579538323646083
 Transform:
   m_ObjectHideFlags: 0
@@ -45343,6 +45380,7 @@ GameObject:
   - component: {fileID: 7804918066113082659}
   - component: {fileID: 1587740020597677224}
   - component: {fileID: 1587740020597677225}
+  - component: {fileID: 1587740020597677226}
   m_Layer: 0
   m_Name: Text.006
   m_TagString: Untagged
@@ -45381,10 +45419,22 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
+--- !u!65 &1587740020597677226
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587740020597677223}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.005881075, y: 0.008019998, z: 0.00032000002}
+  m_Center: {x: -0.003090568, y: 0.00341, z: 0.000000059604645}
 --- !u!1 &1588534198474369627
 GameObject:
   m_ObjectHideFlags: 0
@@ -45568,6 +45618,7 @@ GameObject:
   - component: {fileID: 7252130486370323066}
   - component: {fileID: 1608392764996813487}
   - component: {fileID: 1608392764996813488}
+  - component: {fileID: 1608392764996813489}
   m_Layer: 0
   m_Name: Cylinder.042
   m_TagString: Untagged
@@ -45605,6 +45656,19 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
+--- !u!65 &1608392764996813489
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608392764996813486}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.020000001, z: 0.020000001}
+  m_Center: {x: 0, y: 0.0000019073486, z: 0}
 --- !u!1 &1608569662991664094
 GameObject:
   m_ObjectHideFlags: 0
@@ -45855,10 +45919,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!4 &1632839437599919289
 Transform:
   m_ObjectHideFlags: 0
@@ -46021,10 +46084,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!114 &1659905464631877655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46326,7 +46388,6 @@ GameObject:
   - component: {fileID: 5966639857681716620}
   - component: {fileID: 1699924233709722370}
   - component: {fileID: 1699924233709722371}
-  - component: {fileID: 1699924233709722372}
   m_Layer: 0
   m_Name: Cube.105
   m_TagString: Untagged
@@ -46364,27 +46425,6 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: -0.004, z: 0}
   m_TimeToStationary: 0.5
---- !u!114 &1699924233709722372
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1699924233709722369}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ea6f09149b6ceb4d853303301941d10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NewTexture:
-  - {fileID: 2800000, guid: 9834a9afec3e16c4bbebdfa0f0cc67d1, type: 3}
-  CurrentTexture: 0
-  ChangedTexture: 0
-  m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
 --- !u!23 &1703872814180735780
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -46520,6 +46560,7 @@ GameObject:
   - component: {fileID: 1723216511600023171}
   - component: {fileID: 1723216511600023172}
   - component: {fileID: 1723216511600023173}
+  - component: {fileID: 1723216511600023174}
   m_Layer: 0
   m_Name: Cube.158
   m_TagString: Untagged
@@ -46574,10 +46615,22 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
+--- !u!65 &1723216511600023174
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1723216511600023170}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.019999996, z: 0.02}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1727558247343143881
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -46825,6 +46878,7 @@ GameObject:
   - component: {fileID: 1788614840232109942}
   - component: {fileID: 1788614840232109943}
   - component: {fileID: 1788614840232109944}
+  - component: {fileID: 1788614840232109945}
   m_Layer: 0
   m_Name: Cylinder.044
   m_TagString: Untagged
@@ -46878,10 +46932,22 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
+--- !u!65 &1788614840232109945
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1788614840232109941}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.02, z: 0.02}
+  m_Center: {x: 0, y: 0.0000076293945, z: 0.000000007450581}
 --- !u!33 &1790938639968363386
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -47070,10 +47136,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!23 &1821866748313468969
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -47432,10 +47497,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!114 &1874252959330333705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47454,7 +47518,6 @@ MonoBehaviour:
   m_renderer: {fileID: 0}
   handle: {fileID: 0}
   splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
   Percentage: {fileID: 0}
 --- !u!4 &1882602766972643488
 Transform:
@@ -47566,10 +47629,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!33 &1939887720385674251
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -47858,10 +47920,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!33 &1996277790814005651
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -48061,10 +48122,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!33 &2028172403478598005
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -48280,10 +48340,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!4 &2053208766737942297
 Transform:
   m_ObjectHideFlags: 0
@@ -48490,8 +48549,8 @@ GameObject:
   - component: {fileID: 1568677103420968104}
   - component: {fileID: 2078841723915893477}
   - component: {fileID: 2078841723915893478}
-  - component: {fileID: 2078841723915893479}
   - component: {fileID: 2078841723915893480}
+  - component: {fileID: 2078841723915893479}
   m_Layer: 0
   m_Name: Cube.134
   m_TagString: Untagged
@@ -48529,27 +48588,19 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
---- !u!114 &2078841723915893479
-MonoBehaviour:
+--- !u!65 &2078841723915893479
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2078841723915893476}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ea6f09149b6ceb4d853303301941d10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NewTexture:
-  - {fileID: 2800000, guid: 9834a9afec3e16c4bbebdfa0f0cc67d1, type: 3}
-  CurrentTexture: 0
-  ChangedTexture: 0
-  m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.019999996, z: 0.02}
+  m_Center: {x: 0, y: -0.000000059604645, z: 0}
 --- !u!114 &2078841723915893480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48810,10 +48861,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!114 &2099184698326606012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49042,10 +49092,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!23 &2133229913009031569
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -49171,10 +49220,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!23 &2154092416650010199
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -49298,10 +49346,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!23 &2162773363615211212
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -49542,10 +49589,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!23 &2192147792802589149
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -50647,10 +50693,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!33 &2347384196744292423
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -50866,7 +50911,6 @@ GameObject:
   - component: {fileID: 5534161983477600749}
   - component: {fileID: 2416321832951441512}
   - component: {fileID: 2416321832951441513}
-  - component: {fileID: 2416321832951441514}
   - component: {fileID: 2416321832951441515}
   m_Layer: 0
   m_Name: Cube.150
@@ -50905,27 +50949,6 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0.001, y: -0.028, z: 0.015000001}
   m_TimeToStationary: 0.5
---- !u!114 &2416321832951441514
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2416321832951441511}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ea6f09149b6ceb4d853303301941d10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NewTexture:
-  - {fileID: 2800000, guid: 9834a9afec3e16c4bbebdfa0f0cc67d1, type: 3}
-  CurrentTexture: 0
-  ChangedTexture: 0
-  m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
 --- !u!114 &2416321832951441515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51504,10 +51527,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!1 &2505922268994892738
 GameObject:
   m_ObjectHideFlags: 0
@@ -51706,10 +51728,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!33 &2562501175135868804
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -51786,10 +51807,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!23 &2564906467589701044
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -51972,10 +51992,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!33 &2583933579794964432
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -52028,6 +52047,7 @@ GameObject:
   - component: {fileID: 2599206114412147013}
   - component: {fileID: 2599206114412147014}
   - component: {fileID: 2599206114412147015}
+  - component: {fileID: 2599206114412147016}
   m_Layer: 0
   m_Name: Cube.170
   m_TagString: Untagged
@@ -52082,10 +52102,22 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
+--- !u!65 &2599206114412147016
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2599206114412147012}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.019999992, y: 0.019999998, z: 0.02}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2600558895690672115
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -52364,10 +52396,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!33 &2626021984903033699
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -52977,10 +53008,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!1 &2694039360259293828
 GameObject:
   m_ObjectHideFlags: 0
@@ -53169,10 +53199,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!114 &2716350600662874469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53365,10 +53394,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!1 &2747211723842124782
 GameObject:
   m_ObjectHideFlags: 0
@@ -54543,10 +54571,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!23 &2914493514697822765
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -54693,6 +54720,7 @@ GameObject:
   - component: {fileID: 2921003952464836735}
   - component: {fileID: 2921003952464836736}
   - component: {fileID: 2921003952464836737}
+  - component: {fileID: 2921003952464836738}
   m_Layer: 0
   m_Name: Cube.163
   m_TagString: Untagged
@@ -54747,10 +54775,22 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
+--- !u!65 &2921003952464836738
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2921003952464836734}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.019999992, z: 0.02}
+  m_Center: {x: 0.000000029802322, y: 0.000000013504177, z: -9.313225e-10}
 --- !u!33 &2933871479673308420
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -55410,7 +55450,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4577068867971175922}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -36.47115, y: 3.202857, z: -12.45327}
+  m_LocalPosition: {x: -39.03, y: 3.202857, z: -12.45327}
   m_LocalScale: {x: 169.80412, y: 22.265194, z: 245.91069}
   m_Children: []
   m_Father: {fileID: 71019821752275633}
@@ -55580,10 +55620,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!1 &3119115339571155080
 GameObject:
   m_ObjectHideFlags: 0
@@ -55852,10 +55891,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!23 &3170814844138845610
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -56259,6 +56297,7 @@ GameObject:
   - component: {fileID: 5969349038600936694}
   - component: {fileID: 3234015195763040488}
   - component: {fileID: 3234015195763040489}
+  - component: {fileID: 3234015195763040490}
   m_Layer: 0
   m_Name: Text.001
   m_TagString: Untagged
@@ -56292,14 +56331,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ea6f09149b6ceb4d853303301941d10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NewTexture: []
+  NewTexture:
+  - {fileID: 2100000, guid: 96bb9b0516e2d499db14373c9232ab1c, type: 2}
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
+--- !u!65 &3234015195763040490
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3234015195763040487}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.00468, y: 0.00682, z: 0.0032}
+  m_Center: {x: -0.00309, y: 0.00341, z: 0.000000059604645}
 --- !u!33 &3237136171536259029
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -56376,10 +56428,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!33 &3245596719530011126
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -56864,10 +56915,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!1 &3337042062961651688
 GameObject:
   m_ObjectHideFlags: 0
@@ -57031,8 +57081,8 @@ GameObject:
   - component: {fileID: 9132111410178905614}
   - component: {fileID: 3377467777980161755}
   - component: {fileID: 3377467777980161756}
-  - component: {fileID: 3377467777980161757}
   - component: {fileID: 3377467777980161758}
+  - component: {fileID: 3377467777980161757}
   m_Layer: 0
   m_Name: Cube.136
   m_TagString: Untagged
@@ -57070,27 +57120,19 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
---- !u!114 &3377467777980161757
-MonoBehaviour:
+--- !u!65 &3377467777980161757
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3377467777980161754}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ea6f09149b6ceb4d853303301941d10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NewTexture:
-  - {fileID: 2800000, guid: 9834a9afec3e16c4bbebdfa0f0cc67d1, type: 3}
-  CurrentTexture: 0
-  ChangedTexture: 0
-  m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.02, z: 0.020000001}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &3377467777980161758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57222,10 +57264,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!4 &3409158863697648283
 Transform:
   m_ObjectHideFlags: 0
@@ -57857,10 +57898,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!33 &3496714591956734891
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -58221,7 +58261,6 @@ GameObject:
   - component: {fileID: 5648616303273986508}
   - component: {fileID: 3601450603519914787}
   - component: {fileID: 3601450603519914788}
-  - component: {fileID: 3601450603519914789}
   m_Layer: 0
   m_Name: Cube.131
   m_TagString: Untagged
@@ -58259,27 +58298,6 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0.006}
   m_TimeToStationary: 0.5
---- !u!114 &3601450603519914789
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3601450603519914786}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ea6f09149b6ceb4d853303301941d10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NewTexture:
-  - {fileID: 2800000, guid: 9834a9afec3e16c4bbebdfa0f0cc67d1, type: 3}
-  CurrentTexture: 0
-  ChangedTexture: 0
-  m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
 --- !u!23 &3602530043470133792
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -58335,6 +58353,7 @@ GameObject:
   - component: {fileID: 3605651959783735420}
   - component: {fileID: 3605651959783735421}
   - component: {fileID: 3605651959783735422}
+  - component: {fileID: 3605651959783735423}
   m_Layer: 0
   m_Name: Cube.167
   m_TagString: Untagged
@@ -58389,10 +58408,22 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
+--- !u!65 &3605651959783735423
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3605651959783735419}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.020000003, z: 0.019999996}
+  m_Center: {x: 0, y: 0, z: -0.000000029802322}
 --- !u!1 &3610747730393210226
 GameObject:
   m_ObjectHideFlags: 0
@@ -58581,10 +58612,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!114 &3631488315626961936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58888,10 +58918,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!1 &3686186556605537514
 GameObject:
   m_ObjectHideFlags: 0
@@ -59394,10 +59423,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!33 &3772125940661690144
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -59601,6 +59629,7 @@ GameObject:
   - component: {fileID: 442067757135327609}
   - component: {fileID: 3792970781704708845}
   - component: {fileID: 3792970781704708846}
+  - component: {fileID: 3792970781704708847}
   m_Layer: 0
   m_Name: Torus.003
   m_TagString: Untagged
@@ -59639,10 +59668,22 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
+--- !u!65 &3792970781704708847
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3792970781704708844}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0133717405, y: 0.02185447, z: 0.016423903}
+  m_Center: {x: 0.0055022794, y: -0.00057387253, z: 0.003283153}
 --- !u!23 &3794718743491235176
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -59753,10 +59794,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!4 &3799716375944046244
 Transform:
   m_ObjectHideFlags: 0
@@ -59944,10 +59984,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!33 &3812971330534361546
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -60179,10 +60218,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!33 &3860537895684947703
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -60310,10 +60348,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!114 &3873179729193807825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60920,10 +60957,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!33 &3968542231547885298
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -61058,7 +61094,6 @@ GameObject:
   - component: {fileID: 7430007708215028484}
   - component: {fileID: 3986690356091317488}
   - component: {fileID: 3986690356091317489}
-  - component: {fileID: 3986690356091317490}
   m_Layer: 0
   m_Name: Cube.029
   m_TagString: Untagged
@@ -61096,27 +61131,6 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0.001}
   m_TimeToStationary: 0.5
---- !u!114 &3986690356091317490
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3986690356091317487}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ea6f09149b6ceb4d853303301941d10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NewTexture:
-  - {fileID: 2800000, guid: 9834a9afec3e16c4bbebdfa0f0cc67d1, type: 3}
-  CurrentTexture: 0
-  ChangedTexture: 0
-  m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
 --- !u!23 &3987371921359059448
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -61527,10 +61541,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!114 &4044901576936427671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61849,10 +61862,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!33 &4098999836543902942
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -62075,10 +62087,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!114 &4125632409998553687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62420,6 +62431,7 @@ GameObject:
   - component: {fileID: 4188991631721910374}
   - component: {fileID: 4188991631721910375}
   - component: {fileID: 4188991631721910376}
+  - component: {fileID: 4188991631721910377}
   m_Layer: 0
   m_Name: Cylinder.059
   m_TagString: Untagged
@@ -62470,6 +62482,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   extendsIslandOffset: 1
+--- !u!65 &4188991631721910377
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4188991631721910373}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.020000042, z: 0.019999996}
+  m_Center: {x: 0, y: -0.0000009536743, z: -0.0000000018626451}
 --- !u!4 &4189108124075261455
 Transform:
   m_ObjectHideFlags: 0
@@ -62581,10 +62606,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!114 &4202820166457367483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62911,10 +62935,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!4 &4251698683825535739
 Transform:
   m_ObjectHideFlags: 0
@@ -63116,10 +63139,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!114 &4277499696984241376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63396,10 +63418,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!4 &4322216946439029356
 Transform:
   m_ObjectHideFlags: 0
@@ -63553,10 +63574,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!23 &4351927051058327536
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -63666,10 +63686,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!23 &4355846182807293625
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -64002,8 +64021,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2020793470938237464}
   m_LocalRotation: {x: -0.70682865, y: -0.00013696827, z: -0.000067270455, w: 0.70738477}
-  m_LocalPosition: {x: -94.64964, y: 3.6164565, z: 135.98682}
-  m_LocalScale: {x: 6114.177, y: 38.014683, z: 329.2627}
+  m_LocalPosition: {x: -92.6558, y: 3.6167, z: 135.9874}
+  m_LocalScale: {x: 6313.499, y: 38.014683, z: 329.2627}
   m_Children: []
   m_Father: {fileID: 71019821752275633}
   m_RootOrder: 69
@@ -64166,10 +64185,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!4 &4400824954291207758
 Transform:
   m_ObjectHideFlags: 0
@@ -64242,7 +64260,6 @@ GameObject:
   - component: {fileID: 9194491934985289647}
   - component: {fileID: 4428737832354887728}
   - component: {fileID: 4428737832354887729}
-  - component: {fileID: 4428737832354887730}
   - component: {fileID: 4428737832354887731}
   m_Layer: 0
   m_Name: Cube.200
@@ -64281,27 +64298,6 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0.015000001}
   m_TimeToStationary: 0.5
---- !u!114 &4428737832354887730
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4428737832354887727}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ea6f09149b6ceb4d853303301941d10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NewTexture:
-  - {fileID: 2800000, guid: 9834a9afec3e16c4bbebdfa0f0cc67d1, type: 3}
-  CurrentTexture: 0
-  ChangedTexture: 0
-  m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
 --- !u!114 &4428737832354887731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64605,10 +64601,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!23 &4481580676673899613
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -64866,10 +64861,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!4 &4512630035541608645
 Transform:
   m_ObjectHideFlags: 0
@@ -65020,6 +65014,7 @@ GameObject:
   - component: {fileID: 2162773363615211212}
   - component: {fileID: 4525336962902601839}
   - component: {fileID: 4525336962902601840}
+  - component: {fileID: 4525336962902601841}
   m_Layer: 0
   m_Name: Cylinder.011
   m_TagString: Untagged
@@ -65057,6 +65052,19 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
+--- !u!65 &4525336962902601841
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4525336962902601838}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.019999996, z: 0.019999996}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &4527944482945644351
 Transform:
   m_ObjectHideFlags: 0
@@ -65264,6 +65272,7 @@ GameObject:
   - component: {fileID: 5025297868254071393}
   - component: {fileID: 4571740932348028617}
   - component: {fileID: 4571740932348028618}
+  - component: {fileID: 4571740932348028619}
   m_Layer: 0
   m_Name: Cylinder.043
   m_TagString: Untagged
@@ -65301,6 +65310,19 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
+--- !u!65 &4571740932348028619
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4571740932348028616}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.020000001, z: 0.020000001}
+  m_Center: {x: -0.0000076293945, y: 0.0000019073486, z: 0}
 --- !u!4 &4573270061040246633
 Transform:
   m_ObjectHideFlags: 0
@@ -65379,14 +65401,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NewTexture:
-  - {fileID: 2800000, guid: 9834a9afec3e16c4bbebdfa0f0cc67d1, type: 3}
+  - {fileID: 8992934318045909824, guid: 5f3031ba6638e4590a25ffe5c7224844, type: 3}
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!23 &4578685916468318349
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -65937,10 +65958,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!4 &4643767959819967687
 Transform:
   m_ObjectHideFlags: 0
@@ -66039,10 +66059,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!4 &4653460969396735417
 Transform:
   m_ObjectHideFlags: 0
@@ -66141,10 +66160,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!4 &4689894915142105533
 Transform:
   m_ObjectHideFlags: 0
@@ -66405,10 +66423,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!1 &4735994405944150861
 GameObject:
   m_ObjectHideFlags: 0
@@ -66524,10 +66541,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!4 &4749209012786290253
 Transform:
   m_ObjectHideFlags: 0
@@ -66555,7 +66571,6 @@ GameObject:
   - component: {fileID: 6565336080002479649}
   - component: {fileID: 4751306900907632824}
   - component: {fileID: 4751306900907632825}
-  - component: {fileID: 4751306900907632826}
   - component: {fileID: 4751306900907632827}
   m_Layer: 0
   m_Name: Cube.101
@@ -66594,27 +66609,6 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0.001, y: -0.028, z: 0.015000001}
   m_TimeToStationary: 0.5
---- !u!114 &4751306900907632826
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4751306900907632823}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ea6f09149b6ceb4d853303301941d10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NewTexture:
-  - {fileID: 2800000, guid: 9834a9afec3e16c4bbebdfa0f0cc67d1, type: 3}
-  CurrentTexture: 0
-  ChangedTexture: 0
-  m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
 --- !u!114 &4751306900907632827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92112,10 +92106,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!33 &4960910283115293549
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -92429,10 +92422,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!114 &5030411553014773569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92609,10 +92601,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!114 &5064648472265510027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93251,13 +93242,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NewTexture:
-  - {fileID: 2100000, guid: c66ba134c83eb104a9796d3462d16c10, type: 2}
+  - {fileID: 2100000, guid: 5591596565dedf74393867754dde529d, type: 2}
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
   handle: {fileID: 0}
   splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
   Percentage: {fileID: 0}
 --- !u!33 &5177755936301531090
 MeshFilter:
@@ -93595,10 +93585,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!4 &5263918364709483655
 Transform:
   m_ObjectHideFlags: 0
@@ -93906,10 +93895,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!4 &5320004326983220894
 Transform:
   m_ObjectHideFlags: 0
@@ -94036,7 +94024,6 @@ GameObject:
   - component: {fileID: 5705022551581434072}
   - component: {fileID: 5349318064849394538}
   - component: {fileID: 5349318064849394539}
-  - component: {fileID: 5349318064849394540}
   m_Layer: 0
   m_Name: Cube.108
   m_TagString: Untagged
@@ -94074,27 +94061,6 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0.003, z: 0.006}
   m_TimeToStationary: 0.5
---- !u!114 &5349318064849394540
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5349318064849394537}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ea6f09149b6ceb4d853303301941d10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NewTexture:
-  - {fileID: 2800000, guid: 9834a9afec3e16c4bbebdfa0f0cc67d1, type: 3}
-  CurrentTexture: 0
-  ChangedTexture: 0
-  m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
 --- !u!1 &5361563011456387027
 GameObject:
   m_ObjectHideFlags: 0
@@ -94108,6 +94074,7 @@ GameObject:
   - component: {fileID: 6264061586754964610}
   - component: {fileID: 5361563011456387028}
   - component: {fileID: 5361563011456387029}
+  - component: {fileID: 5361563011456387030}
   m_Layer: 0
   m_Name: Text.005
   m_TagString: Untagged
@@ -94145,10 +94112,22 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
+--- !u!65 &5361563011456387030
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5361563011456387027}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0050803586, y: 0.007219999, z: 0.0032}
+  m_Center: {x: -0.0030901793, y: 0.00341, z: 0}
 --- !u!4 &5380615556334897070
 Transform:
   m_ObjectHideFlags: 0
@@ -94255,10 +94234,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!4 &5400309988401265734
 Transform:
   m_ObjectHideFlags: 0
@@ -94604,10 +94582,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!114 &5477517017922338782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94730,10 +94707,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!33 &5495554108047955634
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -94916,6 +94892,7 @@ GameObject:
   - component: {fileID: 5526382959440287400}
   - component: {fileID: 5526382959440287401}
   - component: {fileID: 5526382959440287402}
+  - component: {fileID: 5526382959440287403}
   m_Layer: 0
   m_Name: Cube.171
   m_TagString: Untagged
@@ -94970,10 +94947,22 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
+--- !u!65 &5526382959440287403
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5526382959440287399}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.019342428, y: 0.07311253, z: 0.02}
+  m_Center: {x: 0.0003282768, y: -0.02680811, z: 8.124916e-11}
 --- !u!4 &5533084734954000635
 Transform:
   m_ObjectHideFlags: 0
@@ -95111,10 +95100,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!1 &5543751808432479738
 GameObject:
   m_ObjectHideFlags: 0
@@ -95247,10 +95235,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!23 &5551913912020342646
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -95806,6 +95793,7 @@ GameObject:
   - component: {fileID: 483005467525373721}
   - component: {fileID: 9209636397209572669}
   - component: {fileID: 5630453542598565183}
+  - component: {fileID: 5630453542598565184}
   m_Layer: 0
   m_Name: Text.003
   m_TagString: Untagged
@@ -95827,6 +95815,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -7432939776326845586, guid: e362e70b6652743ac9785acf65e0c26e, type: 3}
+--- !u!65 &5630453542598565184
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5630453542598565182}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.006600901, y: 0.007719999, z: 0.0032}
+  m_Center: {x: -0.003620451, y: 0.00341, z: 0.00000011920929}
 --- !u!23 &5631614503347885221
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -96229,7 +96230,6 @@ GameObject:
   - component: {fileID: 4578685916468318349}
   - component: {fileID: 5687197661621408841}
   - component: {fileID: 5687197661621408842}
-  - component: {fileID: 5687197661621408843}
   - component: {fileID: 5687197661621408844}
   m_Layer: 0
   m_Name: Cube.086
@@ -96268,27 +96268,6 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0.001, y: -0.028, z: 0.015000001}
   m_TimeToStationary: 0.5
---- !u!114 &5687197661621408843
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5687197661621408840}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ea6f09149b6ceb4d853303301941d10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NewTexture:
-  - {fileID: 2800000, guid: 9834a9afec3e16c4bbebdfa0f0cc67d1, type: 3}
-  CurrentTexture: 0
-  ChangedTexture: 0
-  m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
 --- !u!114 &5687197661621408844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96659,10 +96638,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!1 &5737966779841518119
 GameObject:
   m_ObjectHideFlags: 0
@@ -97169,10 +97147,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!23 &5809556457229908058
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -97296,10 +97273,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!23 &5826081032451690528
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -97417,10 +97393,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!23 &5836212184829438892
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -97857,10 +97832,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!23 &5892351758947884689
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -98107,10 +98081,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!1 &5931197800409079832
 GameObject:
   m_ObjectHideFlags: 0
@@ -98179,10 +98152,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!4 &5934126754624319972
 Transform:
   m_ObjectHideFlags: 0
@@ -98659,10 +98631,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!4 &5983942479900306805
 Transform:
   m_ObjectHideFlags: 0
@@ -98817,10 +98788,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!33 &5997171374293244627
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -99162,10 +99132,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!33 &6045269533283409326
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -99314,10 +99283,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!1 &6054370568741874194
 GameObject:
   m_ObjectHideFlags: 0
@@ -99836,6 +99804,7 @@ GameObject:
   - component: {fileID: 6137468208399448252}
   - component: {fileID: 6137468208399448253}
   - component: {fileID: 6137468208399448254}
+  - component: {fileID: 6137468208399448255}
   m_Layer: 0
   m_Name: Cylinder.037
   m_TagString: Untagged
@@ -99890,10 +99859,22 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
+--- !u!65 &6137468208399448255
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6137468208399448251}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.019999998, y: 0.019999998, z: 0.020000003}
+  m_Center: {x: 0, y: -1.2407709e-24, z: 0.0000000013969839}
 --- !u!33 &6150944897284210586
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -100600,10 +100581,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!33 &6232461313871577139
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -101023,7 +101003,6 @@ GameObject:
   - component: {fileID: 8134696586771534032}
   - component: {fileID: 6330512195173441282}
   - component: {fileID: 6330512195173441283}
-  - component: {fileID: 6330512195173441284}
   m_Layer: 0
   m_Name: Cube.028
   m_TagString: Untagged
@@ -101061,27 +101040,6 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0.003, z: 0.006}
   m_TimeToStationary: 0.5
---- !u!114 &6330512195173441284
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6330512195173441281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ea6f09149b6ceb4d853303301941d10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NewTexture:
-  - {fileID: 2800000, guid: 9834a9afec3e16c4bbebdfa0f0cc67d1, type: 3}
-  CurrentTexture: 0
-  ChangedTexture: 0
-  m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
 --- !u!4 &6335743372535411481
 Transform:
   m_ObjectHideFlags: 0
@@ -101178,10 +101136,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!4 &6348307764347053111
 Transform:
   m_ObjectHideFlags: 0
@@ -101317,10 +101274,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!4 &6362987299082663166
 Transform:
   m_ObjectHideFlags: 0
@@ -101417,10 +101373,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!1 &6371975333590927969
 GameObject:
   m_ObjectHideFlags: 0
@@ -101490,10 +101445,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!114 &6371975333590927973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101753,10 +101707,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!114 &6430199704873112959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102054,6 +102007,7 @@ GameObject:
   - component: {fileID: 6313914584288107819}
   - component: {fileID: 6467370282545030681}
   - component: {fileID: 6467370282545030682}
+  - component: {fileID: 6467370282545030683}
   m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
@@ -102087,14 +102041,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ea6f09149b6ceb4d853303301941d10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NewTexture: []
+  NewTexture:
+  - {fileID: 2100000, guid: 96bb9b0516e2d499db14373c9232ab1c, type: 2}
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
+--- !u!65 &6467370282545030683
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6467370282545030680}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.006009389, y: 0.0073199994, z: 0.0031999997}
+  m_Center: {x: -0.0035246948, y: 0.0034100001, z: 0.00000023841858}
 --- !u!23 &6470756997514393295
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -102359,10 +102326,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!4 &6517460116187083792
 Transform:
   m_ObjectHideFlags: 0
@@ -102445,10 +102411,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!4 &6520772645382311891
 Transform:
   m_ObjectHideFlags: 0
@@ -103589,10 +103554,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!114 &6716678694926327553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -103793,10 +103757,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!4 &6770451699671235463
 Transform:
   m_ObjectHideFlags: 0
@@ -104011,10 +103974,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!1 &6833248380792493878
 GameObject:
   m_ObjectHideFlags: 0
@@ -104083,10 +104045,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!4 &6835497073409267697
 Transform:
   m_ObjectHideFlags: 0
@@ -104169,10 +104130,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!4 &6848243719694375508
 Transform:
   m_ObjectHideFlags: 0
@@ -104255,10 +104215,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!33 &6862036757823017639
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -104543,10 +104502,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!114 &6888886726339568314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -104761,10 +104719,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!1 &6913452356258284605
 GameObject:
   m_ObjectHideFlags: 0
@@ -104889,6 +104846,7 @@ GameObject:
   - component: {fileID: 6938667862878152727}
   - component: {fileID: 6938667862878152728}
   - component: {fileID: 6938667862878152729}
+  - component: {fileID: 6938667862878152730}
   m_Layer: 0
   m_Name: Cube.160
   m_TagString: Untagged
@@ -104943,10 +104901,22 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
+--- !u!65 &6938667862878152730
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6938667862878152726}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.036727395, y: 0.054564226, z: 0.020763453}
+  m_Center: {x: -0.013027506, y: -0.014624209, z: -0.00019977751}
 --- !u!1 &6939957877522161998
 GameObject:
   m_ObjectHideFlags: 0
@@ -105341,10 +105311,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!23 &7015726038781194107
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -105641,10 +105610,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!114 &7111363714236393484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105798,10 +105766,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!23 &7145032827323220883
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -106698,10 +106665,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!4 &7274391683046978143
 Transform:
   m_ObjectHideFlags: 0
@@ -106997,14 +106963,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NewTexture:
-  - {fileID: 2800000, guid: 9834a9afec3e16c4bbebdfa0f0cc67d1, type: 3}
+  - {fileID: 8992934318045909824, guid: 5f3031ba6638e4590a25ffe5c7224844, type: 3}
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!33 &7330337323792305398
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -107081,10 +107046,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!33 &7348142314767925502
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -107106,7 +107070,6 @@ GameObject:
   - component: {fileID: 4627136494081891857}
   - component: {fileID: 7348881557661978557}
   - component: {fileID: 7348881557661978558}
-  - component: {fileID: 7348881557661978559}
   - component: {fileID: 7348881557661978560}
   m_Layer: 0
   m_Name: Cube.127
@@ -107145,27 +107108,6 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0.001, y: -0.020000001, z: 0.016}
   m_TimeToStationary: 0.5
---- !u!114 &7348881557661978559
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7348881557661978556}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ea6f09149b6ceb4d853303301941d10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NewTexture:
-  - {fileID: 2800000, guid: 9834a9afec3e16c4bbebdfa0f0cc67d1, type: 3}
-  CurrentTexture: 0
-  ChangedTexture: 0
-  m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
 --- !u!114 &7348881557661978560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107192,7 +107134,6 @@ GameObject:
   - component: {fileID: 473340379592876883}
   - component: {fileID: 7349193092715188236}
   - component: {fileID: 7349193092715188237}
-  - component: {fileID: 7349193092715188238}
   - component: {fileID: 7349193092715188239}
   m_Layer: 0
   m_Name: Cube.080
@@ -107231,27 +107172,6 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0.001, y: -0.028, z: 0.015000001}
   m_TimeToStationary: 0.5
---- !u!114 &7349193092715188238
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7349193092715188235}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ea6f09149b6ceb4d853303301941d10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NewTexture:
-  - {fileID: 2800000, guid: 9834a9afec3e16c4bbebdfa0f0cc67d1, type: 3}
-  CurrentTexture: 0
-  ChangedTexture: 0
-  m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
 --- !u!114 &7349193092715188239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107520,10 +107440,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!4 &7381983075564389150
 Transform:
   m_ObjectHideFlags: 0
@@ -107645,7 +107564,6 @@ GameObject:
   - component: {fileID: 7757209938951916101}
   - component: {fileID: 7399995401403725449}
   - component: {fileID: 7399995401403725450}
-  - component: {fileID: 7399995401403725451}
   - component: {fileID: 7399995401403725452}
   m_Layer: 0
   m_Name: Cube.049
@@ -107684,27 +107602,6 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0.001, y: -0.028, z: 0.015000001}
   m_TimeToStationary: 0.5
---- !u!114 &7399995401403725451
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7399995401403725448}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ea6f09149b6ceb4d853303301941d10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NewTexture:
-  - {fileID: 2800000, guid: 9834a9afec3e16c4bbebdfa0f0cc67d1, type: 3}
-  CurrentTexture: 0
-  ChangedTexture: 0
-  m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
 --- !u!114 &7399995401403725452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107800,10 +107697,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!1 &7407870262023164295
 GameObject:
   m_ObjectHideFlags: 0
@@ -107872,10 +107768,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!4 &7408290627160242127
 Transform:
   m_ObjectHideFlags: 0
@@ -107903,7 +107798,6 @@ GameObject:
   - component: {fileID: 2914493514697822765}
   - component: {fileID: 7415600277168043459}
   - component: {fileID: 7415600277168043460}
-  - component: {fileID: 7415600277168043461}
   m_Layer: 0
   m_Name: Cube.109
   m_TagString: Untagged
@@ -107941,27 +107835,6 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0.001}
   m_TimeToStationary: 0.5
---- !u!114 &7415600277168043461
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7415600277168043458}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ea6f09149b6ceb4d853303301941d10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NewTexture:
-  - {fileID: 2800000, guid: 9834a9afec3e16c4bbebdfa0f0cc67d1, type: 3}
-  CurrentTexture: 0
-  ChangedTexture: 0
-  m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
 --- !u!23 &7419779633870334254
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -108687,6 +108560,7 @@ GameObject:
   - component: {fileID: 2713355514176057434}
   - component: {fileID: 7472626963792647523}
   - component: {fileID: 7472626963792647524}
+  - component: {fileID: 7472626963792647525}
   m_Layer: 0
   m_Name: Text.002
   m_TagString: Untagged
@@ -108725,10 +108599,22 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
+--- !u!65 &7472626963792647525
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7472626963792647522}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.018369997, y: 0.0073199975, z: 0.0031999997}
+  m_Center: {x: -0.009104998, y: 0.0034098802, z: 0.00000023841858}
 --- !u!1 &7473459760999765353
 GameObject:
   m_ObjectHideFlags: 0
@@ -108972,6 +108858,7 @@ GameObject:
   - component: {fileID: 769283110699695860}
   - component: {fileID: 7503256164016693512}
   - component: {fileID: 7503256164016693513}
+  - component: {fileID: 7503256164016693514}
   m_Layer: 0
   m_Name: Text.004
   m_TagString: Untagged
@@ -109010,10 +108897,22 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
+--- !u!65 &7503256164016693514
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7503256164016693511}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0066009006, y: 0.0077199987, z: 0.0032}
+  m_Center: {x: -0.0036204807, y: 0.0034099997, z: 0}
 --- !u!33 &7510653818326374791
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -109098,7 +108997,6 @@ GameObject:
   - component: {fileID: 4363974795416060383}
   - component: {fileID: 7520969077898348433}
   - component: {fileID: 7520969077898348434}
-  - component: {fileID: 7520969077898348435}
   - component: {fileID: 7520969077898348436}
   m_Layer: 0
   m_Name: Cube.011
@@ -109137,27 +109035,6 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
---- !u!114 &7520969077898348435
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7520969077898348432}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ea6f09149b6ceb4d853303301941d10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NewTexture:
-  - {fileID: 2800000, guid: 9834a9afec3e16c4bbebdfa0f0cc67d1, type: 3}
-  CurrentTexture: 0
-  ChangedTexture: 0
-  m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
 --- !u!114 &7520969077898348436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109738,10 +109615,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!4 &7618392140446736889
 Transform:
   m_ObjectHideFlags: 0
@@ -109769,7 +109645,6 @@ GameObject:
   - component: {fileID: 1248628511368198567}
   - component: {fileID: 7627940787968474807}
   - component: {fileID: 7627940787968474808}
-  - component: {fileID: 7627940787968474809}
   - component: {fileID: 7627940787968474810}
   m_Layer: 0
   m_Name: Cube.050
@@ -109808,27 +109683,6 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0.001, y: -0.020000001, z: 0.016}
   m_TimeToStationary: 0.5
---- !u!114 &7627940787968474809
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7627940787968474806}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ea6f09149b6ceb4d853303301941d10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NewTexture:
-  - {fileID: 2800000, guid: 9834a9afec3e16c4bbebdfa0f0cc67d1, type: 3}
-  CurrentTexture: 0
-  ChangedTexture: 0
-  m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
 --- !u!114 &7627940787968474810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110037,10 +109891,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!23 &7688362538679195332
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -110412,10 +110265,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!4 &7756431072327109578
 Transform:
   m_ObjectHideFlags: 0
@@ -110821,6 +110673,7 @@ GameObject:
   - component: {fileID: 7813638292057216526}
   - component: {fileID: 7813638292057216527}
   - component: {fileID: 7813638292057216528}
+  - component: {fileID: 7813638292057216529}
   m_Layer: 0
   m_Name: Cylinder.033
   m_TagString: Untagged
@@ -110875,10 +110728,22 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
+--- !u!65 &7813638292057216529
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7813638292057216525}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.02, z: 0.020000003}
+  m_Center: {x: 0, y: -1.2407709e-24, z: 0.0000000013969839}
 --- !u!1 &7820960367661531130
 GameObject:
   m_ObjectHideFlags: 0
@@ -111139,6 +111004,7 @@ GameObject:
   - component: {fileID: 7865721079216791126}
   - component: {fileID: 7865721079216791127}
   - component: {fileID: 7865721079216791128}
+  - component: {fileID: 7865721079216791129}
   m_Layer: 0
   m_Name: Cube.035
   m_TagString: Untagged
@@ -111193,10 +111059,22 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
+--- !u!65 &7865721079216791129
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7865721079216791125}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.020000001, y: 0.019999998, z: 0.03958474}
+  m_Center: {x: 0, y: 0.000000014901161, z: 0.009792373}
 --- !u!1 &7865730972504959226
 GameObject:
   m_ObjectHideFlags: 0
@@ -111210,7 +111088,6 @@ GameObject:
   - component: {fileID: 6080270530409666314}
   - component: {fileID: 7865730972504959227}
   - component: {fileID: 7865730972504959228}
-  - component: {fileID: 7865730972504959229}
   m_Layer: 0
   m_Name: Cube.107
   m_TagString: Untagged
@@ -111248,27 +111125,6 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
---- !u!114 &7865730972504959229
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7865730972504959226}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ea6f09149b6ceb4d853303301941d10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NewTexture:
-  - {fileID: 2800000, guid: 9834a9afec3e16c4bbebdfa0f0cc67d1, type: 3}
-  CurrentTexture: 0
-  ChangedTexture: 0
-  m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
 --- !u!33 &7874211579386539464
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -111657,10 +111513,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!1 &7980189092394485824
 GameObject:
   m_ObjectHideFlags: 0
@@ -111674,6 +111529,7 @@ GameObject:
   - component: {fileID: 1154001589280206160}
   - component: {fileID: 7980189092394485825}
   - component: {fileID: 7980189092394485826}
+  - component: {fileID: 7980189092394485827}
   m_Layer: 0
   m_Name: Cylinder.034
   m_TagString: Untagged
@@ -111711,6 +111567,19 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.001, y: 0, z: -0.003}
   m_TimeToStationary: 0.5
+--- !u!65 &7980189092394485827
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7980189092394485824}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.019924708, y: 0.021117909, z: 0.025413008}
+  m_Center: {x: -0.00066057465, y: 0.00012100457, z: -0.0031472794}
 --- !u!1 &7980600916208846858
 GameObject:
   m_ObjectHideFlags: 0
@@ -111778,10 +111647,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!1 &7982387306713391889
 GameObject:
   m_ObjectHideFlags: 0
@@ -112290,10 +112158,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!1 &8070045148238221047
 GameObject:
   m_ObjectHideFlags: 0
@@ -112399,6 +112266,7 @@ GameObject:
   - component: {fileID: 8088717279344588391}
   - component: {fileID: 8088717279344588392}
   - component: {fileID: 8088717279344588393}
+  - component: {fileID: 8088717279344588394}
   m_Layer: 0
   m_Name: Cube.162
   m_TagString: Untagged
@@ -112453,10 +112321,22 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
+--- !u!65 &8088717279344588394
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8088717279344588390}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.032076485, z: 0.020012977}
+  m_Center: {x: 0.000000059604645, y: 0.006038245, z: 0}
 --- !u!4 &8089784984804088409
 Transform:
   m_ObjectHideFlags: 0
@@ -112600,7 +112480,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4350090143825738807}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -38.0997, y: 8.483174, z: -11.921611}
+  m_LocalPosition: {x: -38.0997, y: 8.483174, z: -11.89}
   m_LocalScale: {x: 357.5309, y: 22.265194, z: 283.4497}
   m_Children: []
   m_Father: {fileID: 71019821752275633}
@@ -112988,7 +112868,6 @@ GameObject:
   - component: {fileID: 8243111593085824133}
   - component: {fileID: 8179675813312609404}
   - component: {fileID: 8179675813312609405}
-  - component: {fileID: 8179675813312609406}
   - component: {fileID: 8179675813312609407}
   m_Layer: 0
   m_Name: Cube.043
@@ -113027,27 +112906,6 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0.001, y: -0.028, z: 0.015000001}
   m_TimeToStationary: 0.5
---- !u!114 &8179675813312609406
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8179675813312609403}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ea6f09149b6ceb4d853303301941d10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NewTexture:
-  - {fileID: 2800000, guid: 9834a9afec3e16c4bbebdfa0f0cc67d1, type: 3}
-  CurrentTexture: 0
-  ChangedTexture: 0
-  m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
 --- !u!114 &8179675813312609407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113611,10 +113469,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!114 &8253794908395628700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113791,7 +113648,6 @@ GameObject:
   - component: {fileID: 6111608987148642478}
   - component: {fileID: 8266231030405419811}
   - component: {fileID: 8266231030405419812}
-  - component: {fileID: 8266231030405419813}
   - component: {fileID: 8266231030405419814}
   m_Layer: 0
   m_Name: Cube.012
@@ -113830,27 +113686,6 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0.001, y: -0.020000001, z: 0.016}
   m_TimeToStationary: 0.5
---- !u!114 &8266231030405419813
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8266231030405419810}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ea6f09149b6ceb4d853303301941d10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NewTexture:
-  - {fileID: 2800000, guid: 9834a9afec3e16c4bbebdfa0f0cc67d1, type: 3}
-  CurrentTexture: 0
-  ChangedTexture: 0
-  m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
 --- !u!114 &8266231030405419814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114014,10 +113849,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!4 &8315329295750992225
 Transform:
   m_ObjectHideFlags: 0
@@ -114292,10 +114126,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!1 &8340789399304204910
 GameObject:
   m_ObjectHideFlags: 0
@@ -114364,10 +114197,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!33 &8353338757903442431
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -114511,10 +114343,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!33 &8373044406390934390
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -114607,10 +114438,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!4 &8399115382318765211
 Transform:
   m_ObjectHideFlags: 0
@@ -114829,6 +114659,7 @@ GameObject:
   - component: {fileID: 8468191919488479557}
   - component: {fileID: 8468191919488479558}
   - component: {fileID: 8468191919488479559}
+  - component: {fileID: 8468191919488479560}
   m_Layer: 0
   m_Name: Cylinder.060
   m_TagString: Untagged
@@ -114879,6 +114710,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   extendsIslandOffset: 1
+--- !u!65 &8468191919488479560
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8468191919488479556}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.020000042, z: 0.019999996}
+  m_Center: {x: 0, y: 0, z: -0.0000000018626451}
 --- !u!4 &8471622908908861049
 Transform:
   m_ObjectHideFlags: 0
@@ -115315,10 +115159,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!23 &8583007156760806695
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -115891,10 +115734,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!33 &8680964832102347376
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -115971,10 +115813,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!1 &8691059671689057078
 GameObject:
   m_ObjectHideFlags: 0
@@ -115988,7 +115829,6 @@ GameObject:
   - component: {fileID: 2773350561674676106}
   - component: {fileID: 8691059671689057079}
   - component: {fileID: 8691059671689057080}
-  - component: {fileID: 8691059671689057081}
   m_Layer: 0
   m_Name: Cube.027
   m_TagString: Untagged
@@ -116026,27 +115866,6 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
---- !u!114 &8691059671689057081
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8691059671689057078}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ea6f09149b6ceb4d853303301941d10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NewTexture:
-  - {fileID: 2800000, guid: 9834a9afec3e16c4bbebdfa0f0cc67d1, type: 3}
-  CurrentTexture: 0
-  ChangedTexture: 0
-  m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
 --- !u!1 &8692451529500089018
 GameObject:
   m_ObjectHideFlags: 0
@@ -116175,6 +115994,7 @@ GameObject:
   - component: {fileID: 8749393338099260258}
   - component: {fileID: 8749393338099260259}
   - component: {fileID: 8749393338099260260}
+  - component: {fileID: 8749393338099260261}
   m_Layer: 0
   m_Name: Cube.164
   m_TagString: Untagged
@@ -116229,10 +116049,22 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
+--- !u!65 &8749393338099260261
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8749393338099260257}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.01979792, y: 0.023767358, z: 0.024481155}
+  m_Center: {x: 0.00010104012, y: 0.0018836795, z: 0.002240579}
 --- !u!33 &8754574561760248079
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -116309,6 +116141,7 @@ GameObject:
   - component: {fileID: 7100930749884874586}
   - component: {fileID: 8759135339212301859}
   - component: {fileID: 8759135339212301860}
+  - component: {fileID: 8759135339212301861}
   m_Layer: 0
   m_Name: Cube.169
   m_TagString: Untagged
@@ -116346,6 +116179,19 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
+--- !u!65 &8759135339212301861
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8759135339212301858}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.019999998, y: 0.020000001, z: 0.019999996}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &8763204457115948560
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -116455,10 +116301,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!1 &8769490748500969352
 GameObject:
   m_ObjectHideFlags: 0
@@ -116761,10 +116606,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!1 &8821428883523671753
 GameObject:
   m_ObjectHideFlags: 0
@@ -116833,10 +116677,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!1 &8825613672363642110
 GameObject:
   m_ObjectHideFlags: 0
@@ -116906,10 +116749,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!114 &8825613672363642114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117184,6 +117026,7 @@ GameObject:
   - component: {fileID: 8897469660124101135}
   - component: {fileID: 8897469660124101136}
   - component: {fileID: 8897469660124101137}
+  - component: {fileID: 8897469660124101138}
   m_Layer: 0
   m_Name: Cylinder.039
   m_TagString: Untagged
@@ -117237,10 +117080,22 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
+--- !u!65 &8897469660124101138
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8897469660124101134}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.020000001, z: 0.020000001}
+  m_Center: {x: 0, y: 0.0000019073486, z: 0}
 --- !u!23 &8899522294204084841
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -117680,10 +117535,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!114 &8932187832992723386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117877,10 +117731,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!1 &8965231802885312621
 GameObject:
   m_ObjectHideFlags: 0
@@ -118427,10 +118280,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!1 &9051066332864840051
 GameObject:
   m_ObjectHideFlags: 0
@@ -118601,6 +118453,7 @@ GameObject:
   - component: {fileID: 4102758245964791462}
   - component: {fileID: 7145032827323220883}
   - component: {fileID: 9072227476137819462}
+  - component: {fileID: 9072227476137819463}
   m_Layer: 0
   m_Name: Torus
   m_TagString: Untagged
@@ -118622,6 +118475,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -8803937527578110353, guid: e362e70b6652743ac9785acf65e0c26e, type: 3}
+--- !u!65 &9072227476137819463
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9072227476137819461}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.023804892, y: 0.022935653, z: 0.0049999994}
+  m_Center: {x: 0.00059755234, y: -0.0010321721, z: -0.000000029685907}
 --- !u!23 &9094834513811829160
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -119187,10 +119053,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!33 &9153347724247857101
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -119569,10 +119434,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!23 &9198848433009105345
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -119682,10 +119546,9 @@ MonoBehaviour:
   CurrentTexture: 0
   ChangedTexture: 0
   m_renderer: {fileID: 0}
-  handle: {fileID: 0}
-  splatPoint: {fileID: 0}
-  PercentagePOS: {fileID: 0}
-  Percentage: {fileID: 0}
+  handle: {fileID: 679751688}
+  splatPoint: {fileID: 186287744}
+  Percentage: {fileID: 1162146703}
 --- !u!23 &9209636397209572669
 MeshRenderer:
   m_ObjectHideFlags: 0

@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
     //////////////// VARIABLES ////////////////
-    
+
     [Header("Movement")]
     public float moveSpeed; //////////////// GENERAL SPEED FOR PLAYER ////////////////////
     public float walkSpeed;
@@ -22,6 +22,16 @@ public class PlayerController : MonoBehaviour
     public float airMultiplier;
     public float gravity = -9.81f;
     bool readyToJump = true;
+
+    [Header("HeadBob Parameter")]
+    [SerializeField] private float walkBobSpeed = 14f;
+    [SerializeField] private float walkBobAmount = 0.05f;
+    [SerializeField] private float sprintBobSpeed = 18f;
+    [SerializeField] private float sprintBobAmount = 0.11f;
+    [SerializeField] private float crouchBobSpeed = 8f;
+    [SerializeField] private float crouchBobAmount = 0.25f;
+    private float DefaultYPOS = 1.585626f;
+    float timer;
 
     ///////// KEYBINDS /////////
 
@@ -47,11 +57,14 @@ public class PlayerController : MonoBehaviour
     Vector3 moveDirection; ///////// DIRECTION THE PLAYER MOVES IN
 
     Rigidbody rb; /// PLAYER RIGID BODY
+    public Camera playerCamera;
 
     public TextMeshProUGUI health;
 
     /////////////////// MOVEMENT STATE ///////////////////
 
+    bool IsSprinting = false;
+    public bool Headbob = true;
 
     public MovementState state;
 
@@ -69,9 +82,10 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        //playerCamera = GetComponent<Camera>();
         rb.freezeRotation = true;
     }
-        
+
     // Update is called once per frame
     void Update()
     {
@@ -85,13 +99,18 @@ public class PlayerController : MonoBehaviour
         moveDirection.y = gravity * Time.deltaTime;
 
         ////// Handles Drag on the player /////
-        if(isGrounded)
+        if (isGrounded)
         {
             rb.drag = groundDrag;
         }
         else
         {
             rb.drag = 0f;
+        }
+
+        if(Headbob == true)
+        {
+            HandleHeadbob();
         }
     }
 
@@ -109,7 +128,7 @@ public class PlayerController : MonoBehaviour
 
         ////////////////// JUMP SYSTEM ///////////////////
 
-        if(Input.GetKeyDown(jumpKey) && readyToJump == true && isGrounded == true) /// This checks if the player pressed space or what ever keybind they selected to jump
+        if (Input.GetKeyDown(jumpKey) && readyToJump == true && isGrounded == true) /// This checks if the player pressed space or what ever keybind they selected to jump
         {
             Debug.Log("Jumping");
             readyToJump = false; //Changes the bool status to false so the player can't spam 
@@ -124,10 +143,11 @@ public class PlayerController : MonoBehaviour
 
 
         // MODE - SPRINTING
-        if(isGrounded && Input.GetKey(sprintKey))
+        if (isGrounded && Input.GetKey(sprintKey))
         {
             state = MovementState.sprinting;
             moveSpeed = sprintSpeed;
+            IsSprinting = true;
 
         }
         else if (isGrounded)
@@ -139,7 +159,12 @@ public class PlayerController : MonoBehaviour
         else if (!isGrounded)
         {
             state = MovementState.air;
+            
 
+        }
+        else
+        {
+            IsSprinting = false;
         }
 
     }
@@ -150,21 +175,21 @@ public class PlayerController : MonoBehaviour
 
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
         //WHEN ON THE GROUND
-        if(isGrounded)
+        if (isGrounded)
         {
-            rb.AddForce(moveDirection.normalized * moveSpeed* 10f, ForceMode.Force); //// THIS ADDS FORCE TO THE RIGID BODY AND MAKES THE PLAYER MOVE IN THE DIRECTION PRESSED IN
+            rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force); //// THIS ADDS FORCE TO THE RIGID BODY AND MAKES THE PLAYER MOVE IN THE DIRECTION PRESSED IN
         }
 
-        else if(!isGrounded)
+        else if (!isGrounded)
         {
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f * airMultiplier, ForceMode.Force); // IF THE PLAYER IS IN THE AIR AND NOT TOUCHING THE GROUND
         }
     }
-    
+
     private void SpeedControl()
     {
         Vector3 flatvel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
-        if(flatvel.magnitude > moveSpeed)
+        if (flatvel.magnitude > moveSpeed)
         {
             Vector3 limitedVel = flatvel.normalized * moveSpeed;
             rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z);
@@ -198,10 +223,28 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "EnemyBullets")
+        if (collision.gameObject.tag == "EnemyBullets")
         {
             Health(15);
         }
+    }
+
+    private void HandleHeadbob()
+    {
+
+        if (Mathf.Abs(moveDirection.x) > 0.1f || Mathf.Abs(moveDirection.z) > 0.1f && isGrounded)
+        {
+            timer += Time.deltaTime * (IsSprinting ? sprintBobSpeed : walkBobSpeed);
+            if (IsSprinting == true)
+            {
+                playerCamera.transform.localPosition = new Vector3(playerCamera.transform.localPosition.x, DefaultYPOS + Mathf.Sin(timer) * (sprintBobAmount), playerCamera.transform.localPosition.z);
+            }
+            if(state == MovementState.walking)
+            {
+                playerCamera.transform.localPosition = new Vector3(playerCamera.transform.localPosition.x, DefaultYPOS + Mathf.Sin(timer) * (walkBobAmount), playerCamera.transform.localPosition.z);
+            }
+        }
+
     }
 
 }

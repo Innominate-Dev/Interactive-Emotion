@@ -21,7 +21,7 @@ public class ChangingTexture : MonoBehaviour
 
     //ublic Slider Progress;
     float progress;
-    int PercentageProgress;
+    float PercentageProgress;
 
     public RectTransform handle;
     public RectTransform splatPoint;
@@ -54,6 +54,8 @@ public class ChangingTexture : MonoBehaviour
 
         fill.transform.localScale = new Vector3(progress, fill.transform.localScale.y, fill.transform.localScale.z);
         handle.position = splatPoint.position;
+
+        PercentageProgress = 0;
     }
 
     // Update is called once per frame
@@ -72,9 +74,11 @@ public class ChangingTexture : MonoBehaviour
 
             fill.transform.localScale = new Vector3(progress, fill.transform.localScale.y, fill.transform.localScale.z);
             handle.position = splatPoint.position;
-            PercentagePOS.position = splatPoint.position;
+            PercentagePOS.position = new Vector3(splatPoint.position.x, 26.69f, 0);
+            
 
-            PercentageProgress = ((int)progress);
+            PercentageProgress = (progress * 100);
+            PercentageProgress = Mathf.Round(PercentageProgress);
             Percentage.text = (PercentageProgress + "%");
 
             ChangedTexture = true;

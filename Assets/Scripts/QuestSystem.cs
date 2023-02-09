@@ -52,8 +52,15 @@ public class QuestSystem : MonoBehaviour
     public bool AshQuestStarted = false;
     public bool QuynhQuestStarted = false;
 
+    public bool AshPaintWallQuest = false;
+    public bool QuynhPaintWallQuest = false;
+
     public bool AshTalking = false;
     public bool QuynhTalking = false;
+
+    public bool AshTalkingPart1 = false;
+    public bool AshTalkingPart2 = false;
+    public bool AshTalkingPart3 = false;
 
     // Start is called before the first frame update
     void Start()
@@ -83,8 +90,10 @@ public class QuestSystem : MonoBehaviour
                     if (hit.transform.name == "Ash" && AshMemoryCollected == false)
                     {
                         Dialogue1.SetActive(true);
-                        textWriter.AddWriter(DialogueText1, "Ash Hi I am Ash! I've heard a lot about you. Can you do me a favour? Find this memory for me I'll pay you! It is very dear to me.", .1f, true);
+                        //textWriter.AddWriter(DialogueText1, "Ash Hi I am Ash! I've heard a lot about you. Can you do me a favour? Find this memory for me I'll pay you! It is very dear to me.", .1f, true);
+                        StartCoroutine(AshTalkingDialogue());
                         AshTalking = true;
+                        AshTalkingPart1 = true;
                         FindMemory.gameObject.SetActive(true);
                     }
 
@@ -111,7 +120,7 @@ public class QuestSystem : MonoBehaviour
                         Dialogue2.SetActive(true);
                         textWriter2.AddWriter(DialogueText2, "WOW You found it thanks! Could you just paint it on the wall for me.", .1f, true);
                         FindMemory.text = "- <s>Find the memory</s>";
-                        PaintTheWall.gameObject.SetActive(true);
+
 
                     }
                 }
@@ -206,6 +215,14 @@ public class QuestSystem : MonoBehaviour
             QuynhQuest.SetActive(true);
             QuynhQuestStarted = true;
         }
+        if(AshPaintWallQuest == true)
+        {
+            PaintTheWall.gameObject.SetActive(true);
+        }
+        else if(QuynhMemoryCollected == true)
+        {
+            PaintTheWall.gameObject.SetActive(true);
+        }
 
         //if(AshMemoryCollected == true)
         //{
@@ -232,7 +249,20 @@ public class QuestSystem : MonoBehaviour
         }
         else if(AshMemoryCollected == false)
         {
-            textWriter.AddWriter(DialogueText1, "Ash Hi I am Ash! I've heard a lot about you. Can you do me a favour? Find this memory for me I'll pay you! It is very dear to me.", 0f, true);
+            if(AshTalkingPart1 == true)
+            {
+                textWriter.AddWriter(DialogueText1, "Ash Hi I am Ash! I've heard a lot about you. Can you do me a favour? Find this memory for me I'll pay you! It is very dear to me.", 0f, true);
+                AshTalkingPart2 = true;
+            }
+            else if (AshTalkingPart2 == true)
+            {
+                textWriter.AddWriter(DialogueText1, "Test.", 0f, true);
+                AshTalkingPart3 = true;
+            }
+            else if (AshTalkingPart3 == true)
+            {
+                textWriter.AddWriter(DialogueText1, "Tester.", 0f, true);
+            }
         }
     }
 
@@ -248,6 +278,22 @@ public class QuestSystem : MonoBehaviour
             textWriter2.AddWriter(DialogueText2, "Hi I am Quynh! I've heard a lot about you. Can you do me a favour? Find this memory for me I'll pay you! It is very dear to me.", 0f, true);
             Debug.Log("Skipped");
         }
+    }
+
+    IEnumerator AshTalkingDialogue()
+    {
+        yield return new WaitForSeconds(1f);
+        if (AshTalkingPart1 == true)
+            textWriter.AddWriter(DialogueText1, "Ash Hi I am Ash! I've heard a lot about you. Can you do me a favour? Find this memory for me I'll pay you! It is very dear to me.", .1f, true);
+        else if(AshTalkingPart2 == true)
+        {
+            textWriter.AddWriter(DialogueText1, "Test.", .1f, true);
+        }
+        else if( AshTalkingPart3 == true)
+        {
+            textWriter.AddWriter(DialogueText1, "Tester.", .1f, true);
+        }
+
     }
 
 }

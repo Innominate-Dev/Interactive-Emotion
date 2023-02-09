@@ -10,7 +10,7 @@ public class ToggleManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        PC = GetComponent<PlayerController>();
     }
 
     // Update is called once per frame

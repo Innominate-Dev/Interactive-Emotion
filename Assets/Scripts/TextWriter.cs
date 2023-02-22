@@ -41,14 +41,6 @@ public class TextWriter : MonoBehaviour
 
                 if(characterIndex >= textToWrite.Length)
                 {
-                    if(QS.AshTalkingPart1 == true)
-                    {
-                        QS.AshTalkingPart2 = true;
-                    }
-                    if(QS.AshTalkingPart2 == true)
-                    {
-                        QS.AshTalkingPart3 = true;
-                    }
                     OffersButton.gameObject.SetActive(true);
                     uiText = null;
                     return;

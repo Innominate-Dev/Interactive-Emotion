@@ -46,6 +46,8 @@ public class QuestSystem : MonoBehaviour
     public GameObject AshQuest;
     public GameObject QuynhQuest;
 
+    public GameObject AshPaintingWall;
+
     [Header("States")]
 
     public bool AshMemoryCollected = false;
@@ -100,7 +102,7 @@ public class QuestSystem : MonoBehaviour
                         textWriter.AddWriter(DialogueText1,"WOW You found it thanks! Could you just paint it on the wall for me.",.1f,true);
                         FindMemory.text = "- <s>Find the memory</s>";
                         PaintTheWall.gameObject.SetActive(true);
-
+                        AshPaintingWall.SetActive(true);
                     }
 
                     ////////////////////// Quynh Interaction //////////////////////
@@ -216,6 +218,7 @@ public class QuestSystem : MonoBehaviour
         if(AshPaintWallQuest == true)
         {
             PaintTheWall.gameObject.SetActive(true);
+            AshPaintingWall.SetActive(true);
         }
         else if(QuynhMemoryCollected == true)
         {
